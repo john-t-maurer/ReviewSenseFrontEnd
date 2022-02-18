@@ -1,0 +1,20 @@
+.combined-display {
+    background-color: red;
+    margin: 2rem;
+}
+
+.pie-and-words {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.pie {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.words {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

@@ -1,0 +1,24 @@
+.analysis-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.reviews-display {
+    margin: 2rem;
+}
+
+.movie-cover {
+    width: 16rem;
+    height: 22rem;
+    border: 2px;
+    margin: 2rem;
+    font-family: 'Trebuchet MS';
+    font-size: 1.5rem;
+    font-weight: bolder;
+    box-shadow: .3rem .3rem .5rem grey;
+    background-color: #d8d8d8;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

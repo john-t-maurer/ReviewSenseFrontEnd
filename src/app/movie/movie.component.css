@@ -1,0 +1,17 @@
+button {
+    width: 8rem;
+    height: 11rem;
+    border: 2px;
+    margin: 2rem;
+    font-family: 'Trebuchet MS';
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: .3rem .3rem .5rem grey;
+    background-color: #d8d8d8;
+}
+
+button:hover {
+    background-color: #c2c2c2;
+}
