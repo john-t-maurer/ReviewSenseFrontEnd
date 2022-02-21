@@ -1,11 +1,15 @@
 
+<button type="button" (click)="goBack()">Home</button>
+
 <div class="analysis-display">
     <div class="movie-cover">
-        <span>MOVIE TITLE</span>
+        <span *ngIf="movie">{{movie.name}}</span>
     </div>
 
     <!--Conditional display of components based on routing ID.-->
-    <app-pie-chart></app-pie-chart>
+    <app-combined-display *ngIf="display === 0"></app-combined-display>
+    <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>
+    <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>
 </div>
 
 <div class="reviews-display">

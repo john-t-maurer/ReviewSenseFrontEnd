@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordCloudComponent implements OnInit {
 
+  data = [
+    "Hello", "world", "normally", "you", "want", "more", "words",
+    "than", "this"].map(function (d) {
+      return { text: d, value: 10 + Math.random() * 90};
+    })
+
   constructor() { }
 
   ngOnInit(): void {

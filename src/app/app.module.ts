@@ -16,6 +16,10 @@ import { CombinedDisplayComponent } from './combined-display/combined-display.co
 import { WordCloudComponent } from './word-cloud/word-cloud.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
 
+import * as echarts from 'echarts';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { AngularD3CloudModule } from 'angular-d3-cloud';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +38,9 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEchartsModule.forRoot({echarts}),
+    AngularD3CloudModule
   ],
   providers: [],
   bootstrap: [AppComponent]

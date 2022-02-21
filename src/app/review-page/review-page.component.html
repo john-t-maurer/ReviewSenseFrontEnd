@@ -1,11 +1,13 @@
-<div>
-    <h1>Analysis of {{review.reviewer}}'s review of {{movie.name}}</h1>
-    <p>Written on {{review.review_date}}</p>
+<button type="button" (click)="goBack()">Back</button>
 
-    <p id="positivity">Positivity: POSITIVITY</p>
+<div *ngIf="review">
+    <h1>Analysis of {{review.name}}'s review</h1>
+    <p>Written on {{review.date}}</p>
+
+    <p id="positivity">Positivity: {{review.sentiment}}</p>
     <p id="keywords">Keywords: KEYWORDS</p>
     
-    <h2>{{review.review_summary}}</h2>
-    <p>{{review.review_detail}}</p>
+    <h2>{{review.title}}</h2>
+    <p>{{review.review}}</p>
 </div>
 

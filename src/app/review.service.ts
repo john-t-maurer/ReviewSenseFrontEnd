@@ -17,10 +17,10 @@ export class ReviewService {
     return reviews;
   }
 
-  getReview(id: string): Observable<Review> {
+  getReview(reviewid: string): Observable<Review> {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.
-    const review = REVIEWS.find(rev => rev.review_id === id)!;
+    const review = REVIEWS.find(rev => rev.review_id === reviewid)!;
     return of(review);
   }
 }

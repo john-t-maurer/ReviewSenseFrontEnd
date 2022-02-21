@@ -17,10 +17,10 @@ export class MovieService {
     return movies;
   }
 
-  getMovie(id: number): Observable<Movie> {
-    // For now, assume that a hero with the specified `id` always exists.
+  getMovie(movieid: number): Observable<Movie> {
+    // For now, assume that a movie with the specified `id` always exists.
     // Error handling will be added in the next step of the tutorial.
-    const movie = MOVIES.find(mov => mov.ref_num === id)!;
+    const movie = MOVIES.find(mov => mov.ref_num === movieid)!;
     return of(movie);
   }
 }
