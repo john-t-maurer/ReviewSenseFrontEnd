@@ -9,7 +9,6 @@ button {
     cursor: pointer;
     transition: 0.3s;
     box-shadow: .3rem .3rem .5rem grey;
-    background-color: #d8d8d8;
 }
 
 button:hover {

@@ -1,6 +1,8 @@
-<div *ngIf="review" class="review" routerLink="/review/{{review.review_id}}">
-    <h2>{{review.title}}</h2> 
-    <p>By {{review.name}} on {{review.date}}.</p>
+<body>
+   <div *ngIf="review" class="review" routerLink="/review/{{review.review_id}}">
+        <h2>{{review.title}}</h2> 
+        <p>By {{review.name}} on {{review.date}}.</p>
     
-    <p>{{review.review}}</p>        
-</div>
+        <p>{{review.review}}</p>        
+    </div>
+</body>

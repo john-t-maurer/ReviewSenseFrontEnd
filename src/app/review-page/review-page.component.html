@@ -1,13 +1,14 @@
-<button type="button" (click)="goBack()">Back</button>
+<body>
+    <button type="button" (click)="goBack()">Back</button>
 
-<div *ngIf="review">
-    <h1>Analysis of {{review.name}}'s review</h1>
-    <p>Written on {{review.date}}</p>
+    <div *ngIf="review">
+        <h1>Analysis of {{review.name}}'s review</h1>
+        <p>Written on {{review.date}}</p>
 
-    <p id="positivity">Positivity: {{review.sentiment}}</p>
-    <p id="keywords">Keywords: KEYWORDS</p>
-    
-    <h2>{{review.title}}</h2>
-    <p>{{review.review}}</p>
-</div>
+        <p id="positivity">Positivity: {{review.sentiment}}</p>
+        <p id="keywords">Keywords: KEYWORDS</p>
 
+        <h2>{{review.title}}</h2>
+        <p>{{review.review}}</p>
+    </div>
+</body>

@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+    min-width: 650px;
+    max-width: 1440px;
+}

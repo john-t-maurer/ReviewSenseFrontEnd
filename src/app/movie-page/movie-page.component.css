@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    background-image: linear-gradient(slategray, white);
+    margin: auto;
+    min-width: 650px;
+    max-width: 1440px;
+}
+
 .analysis-display {
     display: flex;
     flex-direction: row;
