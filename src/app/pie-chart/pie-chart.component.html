@@ -1,3 +1,3 @@
 <div id="pie-chart">
-    <div echarts [options]="pieOptions"></div>
+    <div echarts [options]="pieOptions" (chartClick)="onClick($event)"></div>
 </div>

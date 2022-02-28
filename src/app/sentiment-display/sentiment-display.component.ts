@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sentiment-display',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SentimentDisplayComponent implements OnInit {
 
-  constructor() { }
+  sentiment = this.route.snapshot.paramMap.get('sentiment');
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

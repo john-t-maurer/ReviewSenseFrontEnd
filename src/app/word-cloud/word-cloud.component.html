@@ -1,13 +1,12 @@
 <div id="word-cloud">
     <angular-d3-cloud
     [data]="data"
-    [width]="100"
-    [height]="50"
+    [width]="300"
+    [height]="200"
     [padding]="5"
     font="serif"
     [rotate]="0"
     [autoFill]="true"
+    (wordClick)="onWordClick($event)"
     ></angular-d3-cloud>
 </div>
-
-<!--(wordClick)="onWorkClick($event)" For the word cloud directive-->

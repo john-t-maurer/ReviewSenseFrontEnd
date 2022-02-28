@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-word-frequency-display',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WordFrequencyDisplayComponent implements OnInit {
 
-  constructor() { }
+  word = this.route.snapshot.paramMap.get('word');
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }

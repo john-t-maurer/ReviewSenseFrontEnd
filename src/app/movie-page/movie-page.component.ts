@@ -49,6 +49,4 @@ export class MoviePageComponent implements OnInit {
     this.location.back();
   }
 
-  //For the on click methods, use this.location.go to switch URLs for routing
-
 }
