@@ -22,7 +22,7 @@ export class MovieListComponent implements OnInit {
   }
 
   getMovies(): void{
-    if (this.options?.header === 'All Movies'){
+    if (this.options?.header === 'Things to Watch'){
       this.movieService.getHomepage().subscribe(movies => this.movies = movies);  
     }else{
       this.movieService.getMovies(this.options?.query).subscribe(movies => this.movies = movies);

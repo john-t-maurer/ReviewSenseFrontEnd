@@ -10,7 +10,7 @@ import { Options } from '../options';
 export class HomePageComponent implements OnInit {
 
   options: Options = {
-    header: "All Movies",
+    header: "Things to Watch",
     query: ""
   };
 
