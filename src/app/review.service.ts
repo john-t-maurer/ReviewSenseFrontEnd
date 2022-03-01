@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 import { Review } from './review';
 import { REVIEWS } from './fake-reviews';
@@ -10,17 +12,25 @@ import { REVIEWS } from './fake-reviews';
 })
 export class ReviewService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getReviews(): Observable<Review[]> {
-    const reviews = of(REVIEWS);
-    return reviews;
+  getReviews(movieid: number): Observable<Review[]> {
+    const reviewsUrl = 'https://www.reviewsense.net/reviewlists?movie_id='
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    console.log(reviewsUrl + movieid)
+    return this.http.get<Review[]>(reviewsUrl + movieid, header_node)
   }
 
-  getReview(reviewid: string): Observable<Review> {
-    // For now, assume that a hero with the specified `id` always exists.
-    // Error handling will be added in the next step of the tutorial.
-    const review = REVIEWS.find(rev => rev.review_id === reviewid)!;
-    return of(review);
+  getReview(reviewid: string): Observable<Review>{
+    const reviewsUrl = 'https://www.reviewsense.net/reviews?review_id='
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    console.log(reviewsUrl + reviewid)
+    return this.http.get<Review>(reviewsUrl + reviewid, header_node)
   }
 }

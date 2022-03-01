@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import * as echarts from 'echarts';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { AngularD3CloudModule } from 'angular-d3-cloud';
+import { SearchResultsPageComponent } from './search-results-page/search-results-page.component';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { AngularD3CloudModule } from 'angular-d3-cloud';
     WordFrequencyDisplayComponent,
     CombinedDisplayComponent,
     WordCloudComponent,
-    PieChartComponent
+    PieChartComponent,
+    SearchResultsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxEchartsModule.forRoot({echarts}),
-    AngularD3CloudModule
+    AngularD3CloudModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

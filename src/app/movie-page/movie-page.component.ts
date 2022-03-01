@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
+import { Options } from '../options';
 
 @Component({
   selector: 'app-movie-page',
@@ -11,6 +12,11 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./movie-page.component.css']
 })
 export class MoviePageComponent implements OnInit {
+
+  options: Options = {
+    header: "All reviews for " + this.movie?.name,
+    query: ""
+  };
 
   display?: Number;
 

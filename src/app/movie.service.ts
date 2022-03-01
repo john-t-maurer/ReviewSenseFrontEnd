@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, of } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 import { Movie } from './movie';
 import { MOVIES } from './fake-movies';
@@ -10,17 +12,35 @@ import { MOVIES } from './fake-movies';
 })
 export class MovieService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getMovies(): Observable<Movie[]> {
-    const movies = of(MOVIES);
-    return movies;
+  getMovies(query?: String): Observable<Movie[]> {
+    const moviesUrl = 'https://www.reviewsense.net/moviesearches?title='
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    console.log(moviesUrl + query)
+    return this.http.get<Movie[]>(moviesUrl + query, header_node)
   }
 
-  getMovie(movieid: number): Observable<Movie> {
-    // For now, assume that a movie with the specified `id` always exists.
-    // Error handling will be added in the next step of the tutorial.
-    const movie = MOVIES.find(mov => mov.ref_num === movieid)!;
-    return of(movie);
+  getHomepage(): Observable<Movie[]>{
+    const homepageUrl = 'https://www.reviewsense.net/homepage'
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    console.log(homepageUrl)
+    return this.http.get<Movie[]>(homepageUrl, header_node)
+  }
+
+  getMovie(movieid: number): Observable<Movie>{
+    const moviesUrl = 'https://www.reviewsense.net/movies?ref_num='
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    console.log(moviesUrl + movieid.toString())
+    return this.http.get<Movie>(moviesUrl + movieid.toString(), header_node)
   }
 }

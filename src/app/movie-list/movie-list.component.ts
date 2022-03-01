@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
+import { Options } from '../options';
 
 @Component({
   selector: 'app-movie-list',
@@ -9,6 +10,8 @@ import { MovieService } from '../movie.service';
   styleUrls: ['./movie-list.component.css']
 })
 export class MovieListComponent implements OnInit {
+
+  @Input() options?: Options;
 
   movies: Movie[] = [];
 
@@ -19,6 +22,10 @@ export class MovieListComponent implements OnInit {
   }
 
   getMovies(): void{
-    this.movieService.getMovies().subscribe(movies => this.movies = movies);
+    if (this.options?.header === 'All Movies'){
+      this.movieService.getHomepage().subscribe(movies => this.movies = movies);  
+    }else{
+      this.movieService.getMovies(this.options?.query).subscribe(movies => this.movies = movies);
+    }
   }
 }
