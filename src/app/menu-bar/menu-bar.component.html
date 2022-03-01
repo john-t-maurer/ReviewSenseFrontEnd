@@ -1,6 +1,6 @@
 <body>
     <div class="menu-bar">
-        <h1>ReviewSense</h1>
+        <h1 (click)="return()">ReviewSense</h1>
         <h2>Search:</h2>
         <p><input (keyup)="onSubmit($event)" [(ngModel)]="searchValue" /></p>
         <h2>Movie reviews analyzed right.</h2>
