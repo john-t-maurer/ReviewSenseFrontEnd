@@ -1,13 +1,14 @@
 <body>
-   <div *ngIf="review" class="review" routerLink="/review/{{review.review_id}}">
+    <div *ngIf="review" class="review" routerLink="/review/{{review.review_id}}">
         <h2 *ngIf="review.title">{{review.title}}</h2>
         <h2 *ngIf="!review.title">(No Title)</h2>
-        <p>By {{review.name}} on {{review.date}}.</p>
-        <p>Sentiment: 
-            <span *ngIf="review.sentiment > 0" style="color: green;">{{review.sentiment}}</span>
-            <span *ngIf="review.sentiment < 0" style="color: red;">{{review.sentiment}}</span>
-        </p>
-        <p>{{review.review}}</p>
-
+        <div class="inner-info">
+            <p class="user">By {{review.name}} on {{review.date}}.</p>
+            <p>Sentiment:
+                <span *ngIf="review.sentiment > 0" style="color: green;">{{review.sentiment}}</span>
+                <span *ngIf="review.sentiment < 0" style="color: red;">{{review.sentiment}}</span>
+            </p>
+            <p>{{review.review}}</p>
+        </div>
     </div>
 </body>

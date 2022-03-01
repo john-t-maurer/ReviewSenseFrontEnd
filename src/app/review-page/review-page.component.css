@@ -1,10 +1,9 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
-    background-image: linear-gradient(slategray, white);
+    background-color: #a8dadc;
     margin: auto;
-    min-width: 650px;
-    max-width: 1440px;
+    font-size: 20px;
 }

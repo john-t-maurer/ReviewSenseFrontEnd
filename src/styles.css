@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body.main {
+    background-color: whitesmoke;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    border-radius: 0px 0px 20px 20px;
+    background-color: gray;
+    font-size: 20px;
+    color: black;
+}

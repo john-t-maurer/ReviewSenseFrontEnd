@@ -1,45 +1,14 @@
-
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
-    background-image: linear-gradient(slategray, white);
     margin: auto;
-    min-width: 650px;
-    max-width: 1440px;
+    padding: auto;
 }
 
-header {
-    text-align: center;
-    font-size: 30px;
-    color: black;
-    margin: 0;
-    padding: 5px;
-}
-
-section {
-    background-color: slategray;
-}
-h4 {
-    text-align: center;
-    background-color: white;
-    font-size: 20px;
-    padding: 5px;
-}
-h2 {
-    text-align: center;
-}
-
-h3 {
-    padding-left: 10%;
-    color: white;
-}
-
-footer {
-    background-color: slategray;
-    text-align: center;
-    font-size: 20px;
-    padding: 5px;
-    color: black;
+div {
+    background-color: #a8dadc;
+    margin: auto;
+    padding: auto;
 }

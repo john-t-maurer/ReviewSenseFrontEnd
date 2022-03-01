@@ -1,12 +1,27 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
     background-color: white;
+    border-bottom: 2px;
     border-style: solid;
     border-color: black;
     margin: auto;
-    min-width: 650px;
-    max-width: 1440px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: auto;
+    font-size: 18px;
+}
+
+div.review {
+    margin: auto;
+    padding: auto;
+    background-color: #f1faee;
+}
+
+div.inner-info {
+    background-color: white;
+    padding: auto;
+    margin: auto;
 }

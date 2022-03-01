@@ -1,0 +1,24 @@
+div.menu-bar {
+    display: grid;
+    grid-template-columns: 18rem 7rem 35rem auto;
+    margin: auto;
+    padding: auto;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+p input {
+    border-radius: 10px;
+    height: 1.5rem;
+    width: 20rem;
+}
+
+body {
+    border-radius: 20px 20px 0px 0px;
+    padding-left: 1.5rem;
+    padding: auto;
+    margin: auto;
+    background-color: #457b9d;
+}

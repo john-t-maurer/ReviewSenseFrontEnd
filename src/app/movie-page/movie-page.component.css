@@ -1,21 +1,27 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
-    background-image: linear-gradient(slategray, white);
+    background-color: #a8dadc;
     margin: auto;
-    min-width: 650px;
-    max-width: 1440px;
+    padding: auto;
 }
 
 .analysis-display {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 20rem auto auto;
+    grid-row: auto auto;
 }
 
 .reviews-display {
-    margin: 2rem;
+    border: 5px;
+    border-style: solid;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 500px;
+    overflow-y: scroll;
 }
 
 .movie-cover {
@@ -28,8 +34,17 @@ body {
     font-weight: bolder;
     box-shadow: .3rem .3rem .5rem grey;
     background-color: #d8d8d8;
-    
+    overflow-wrap: break-word;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 1rem;
+    margin-left: 2.2rem;
+    margin-right: 2.2rem;
+    background-color: #e63946;
 }

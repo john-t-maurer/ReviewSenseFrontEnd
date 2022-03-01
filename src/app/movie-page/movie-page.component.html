@@ -1,6 +1,4 @@
 <body>
-    <button type="button" (click)="goBack()"> &lt; Go Back</button>
-
     <div class="analysis-display">
         <div class="movie-cover">
             <span *ngIf="movie">{{movie.name}}</span>
@@ -11,8 +9,8 @@
         <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>
         <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>
     </div>
-
-        <div class="reviews-display">
+    <h1>List of Reviews</h1>
+    <div class="reviews-display">
         <app-review-list [options]="options"></app-review-list>
     </div>
 </body>
