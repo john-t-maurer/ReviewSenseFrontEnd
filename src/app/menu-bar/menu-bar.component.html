@@ -1,8 +1,16 @@
 <body>
     <div class="menu-bar">
-        <h1 (click)="return()">ReviewSense</h1>
-        <h2>Search:</h2>
-        <p><input (keyup)="onSubmit($event)" [(ngModel)]="searchValue" /></p>
-        <h2>Movie reviews analyzed right.</h2>
+        <div>
+            <h1 (click)="return()"> <img src="Logo_v1.png" alt="ReviewSense"> </h1>
+        </div>
+        <div>
+            <h2>Search:</h2>
+        </div>
+        <div>
+            <p><input (keyup)="onSubmit($event)" [(ngModel)]="searchValue" /></p>
+        </div>
+        <div>
+            <h3>Movie reviews analyzed right.</h3>
+        </div>
     </div>
 </body>

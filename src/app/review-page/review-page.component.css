@@ -7,3 +7,18 @@ body {
     margin: auto;
     font-size: 20px;
 }
+
+div {
+    margin: auto;
+    padding: auto;
+}
+
+h1 {
+    margin: auto;
+    padding: auto;
+}
+
+p {
+    margin: auto;
+    padding: 1rem;
+}

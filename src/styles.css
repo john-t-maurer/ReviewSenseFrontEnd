@@ -8,8 +8,14 @@ footer {
     display: grid;
     grid-template-columns: auto auto auto;
     text-align: center;
+    align-items: center;
     border-radius: 0px 0px 20px 20px;
     background-color: gray;
     font-size: 20px;
     color: black;
+}
+
+div app-body {
+    padding: auto;
+    margin: auto;
 }

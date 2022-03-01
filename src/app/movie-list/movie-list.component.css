@@ -3,3 +3,10 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+h1 {
+    background-color: bisque;
+    padding: 1rem;
+    padding-left: 2rem;
+    margin: auto;
+}

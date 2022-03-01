@@ -3,10 +3,12 @@ div.menu-bar {
     grid-template-columns: 18rem 7rem 35rem auto;
     margin: auto;
     padding: auto;
+    align-items: center;
 }
 
 h1 {
     font-size: 45px;
+    cursor: pointer;
 }
 
 p input {
@@ -21,4 +23,8 @@ body {
     padding: auto;
     margin: auto;
     background-color: #457b9d;
+}
+
+h3 {
+    font-size: 30px;
 }
