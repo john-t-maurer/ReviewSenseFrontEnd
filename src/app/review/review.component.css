@@ -4,20 +4,16 @@
 
 body {
     background-color: white;
-    border-bottom: 2px;
-    border-style: solid;
-    border-color: black;
+    border-bottom: 2px solid black;
     margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding: auto;
+    padding: auto 1rem auto;
     font-size: 18px;
 }
 
 div.review {
     margin: auto;
-    padding: auto;
-    background-color: #f1faee;
+    padding: .5rem;
+    background-color: whitesmoke;
 }
 
 div.inner-info {

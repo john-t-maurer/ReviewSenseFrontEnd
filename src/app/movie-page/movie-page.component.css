@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #a8dadc;
+    background-color: whitesmoke;
     margin: auto;
     padding: auto;
 }
@@ -16,8 +16,7 @@ body {
 }
 
 .reviews-display {
-    border: 5px;
-    border-style: solid;
+    border: 5px solid #ff7d00;
     margin-top: auto;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -47,7 +46,7 @@ h1 {
     padding-left: 1rem;
     margin-top: 0rem;
     margin-bottom: 0rem;
-    margin-left: 2.2rem;
-    margin-right: 2.2rem;
-    background-color: #e63946;
+    margin-left: 1.97rem;
+    margin-right: 1.97rem;
+    background-color: #ff7d00;
 }

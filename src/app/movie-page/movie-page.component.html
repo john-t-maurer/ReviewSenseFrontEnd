@@ -13,9 +13,15 @@
         </div>
 
         <!--Conditional display of components based on routing ID.-->
-        <app-combined-display *ngIf="display === 0"></app-combined-display>
-        <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>
-        <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>
+        <div>
+            <app-combined-display *ngIf="display === 0"></app-combined-display>
+        </div>
+        <div>
+            <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>
+        </div>
+        <div>
+            <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>
+        </div>
     </div>
     <h1>List of Reviews</h1>
     <div class="reviews-display">

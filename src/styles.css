@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body.main {
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 footer {
@@ -10,9 +10,9 @@ footer {
     text-align: center;
     align-items: center;
     border-radius: 0px 0px 20px 20px;
-    background-color: gray;
+    background-color: #1d3557;
     font-size: 20px;
-    color: black;
+    color: aliceblue;
 }
 
 div app-body {

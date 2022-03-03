@@ -9,6 +9,7 @@ div.menu-bar {
 h1 {
     font-size: 45px;
     cursor: pointer;
+    color: aliceblue;
 }
 
 p input {
@@ -22,9 +23,14 @@ body {
     padding-left: 1.5rem;
     padding: auto;
     margin: auto;
-    background-color: #457b9d;
+    background-color: #1d3557;
 }
 
 h3 {
+    color: aliceblue;
     font-size: 30px;
+}
+
+h2 {
+    color: aliceblue;
 }
