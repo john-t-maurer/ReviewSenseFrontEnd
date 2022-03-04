@@ -9,12 +9,19 @@
 <body>
     <div *ngIf="review">
         <h1>Analysis of {{review.name}}'s review</h1>
-        <p>Written on {{review.date}}</p>
 
-        <p id="positivity">Positivity: {{review.sentiment}}</p>
+        <div class="review-top-details">
+            <p>Written on: {{review.date}}</p>
+
+            <p id="positivity">Positivity: {{review.sentiment}}</p>
+        </div>
 
         <h2>{{review.title}}</h2>
-        <p>{{review.review}}</p>
+        <hr>
+        <div class="review-detail">
+            <p>" {{review.review}}"</p>
+        </div>
+
     </div>
 </body>
 

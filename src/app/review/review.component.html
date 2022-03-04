@@ -13,7 +13,7 @@
             </div>
         </div>
         <div class="inner-info">
-            <p class="user">By {{review.name}} on {{review.date}}.</p>
+            <p class="user">By: {{review.name}} on {{review.date}}.</p>
             <p class="Sentiment">Sentiment:
                 <span *ngIf="review.sentiment > 0" style="color: green;">{{review.sentiment}}</span>
                 <span *ngIf="review.sentiment < 0" style="color: red;">{{review.sentiment}}</span>
