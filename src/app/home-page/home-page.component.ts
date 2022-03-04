@@ -11,7 +11,8 @@ export class HomePageComponent implements OnInit {
 
   options: Options = {
     header: "Things to Watch",
-    query: ""
+    query: "",
+    onHomepage: true
   };
 
   constructor() { }

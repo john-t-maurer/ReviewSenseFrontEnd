@@ -15,7 +15,8 @@ export class MoviePageComponent implements OnInit {
 
   options: Options = {
     header: "All reviews for " + this.movie?.name,
-    query: ""
+    query: "",
+    onHomepage: false
   };
 
   display?: Number;

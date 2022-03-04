@@ -13,7 +13,8 @@ export class SearchResultsPageComponent implements OnInit {
 
   options: Options = {
     header: "Search Results",
-    query: String(this.route.snapshot.paramMap.get('query'))
+    query: String(this.route.snapshot.paramMap.get('query')),
+    onHomepage: false
   };
 
   constructor(
