@@ -50,3 +50,8 @@ h1 {
     margin-right: 1.97rem;
     background-color: #ff7d00;
 }
+
+div.empty {
+    height: 1rem;
+    padding: 2rem;
+}
