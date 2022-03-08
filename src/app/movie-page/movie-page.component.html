@@ -9,7 +9,12 @@
 <body>
     <div class="analysis-display">
         <div class="movie-cover">
-            <span *ngIf="movie">{{movie.name}}</span>
+            <span *ngIf="movie">
+                <div *ngIf="movie.poster_url else titleDisplay">
+                    <img src={{movie.poster_url}}>
+                </div>
+                <ng-template #titleDisplay>{{movie.name}}</ng-template>
+            </span>
         </div>
 
         <!--Conditional display of components based on routing ID.-->
@@ -25,7 +30,7 @@
     </div>
     <h1>List of Reviews</h1>
     <div class="reviews-display">
-        <app-review-list [options]="options"></app-review-list>
+        <app-review-list [options]="movieOptions"></app-review-list>
     </div>
     <div class="empty">
 
