@@ -13,10 +13,10 @@ import { Options } from '../options';
 })
 export class MoviePageComponent implements OnInit {
 
-  options: Options = {
+  movieOptions: Options = {
     header: "All reviews for " + this.movie?.name,
     query: "",
-    onHomepage: false
+    location: "Movie"
   };
 
   display?: Number;

@@ -11,10 +11,10 @@ import { Options } from '../options';
 })
 export class SearchResultsPageComponent implements OnInit {
 
-  options: Options = {
+  searchOptions: Options = {
     header: "Search Results",
     query: String(this.route.snapshot.paramMap.get('query')),
-    onHomepage: false
+    location: "Search"
   };
 
   constructor(
