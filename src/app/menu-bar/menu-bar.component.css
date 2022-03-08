@@ -1,6 +1,6 @@
 div.menu-bar {
     display: grid;
-    grid-template-columns: 18rem 7rem 35rem auto;
+    grid-template-columns: 20rem 7rem 35rem auto;
     margin: auto;
     padding: auto;
     align-items: center;
