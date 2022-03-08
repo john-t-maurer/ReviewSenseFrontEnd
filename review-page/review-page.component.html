@@ -1,0 +1,28 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Review | ReviewSense</title>
+
+</head>
+<html>
+
+<body>
+    <div *ngIf="review">
+        <h1>Analysis of {{review.name}}'s review</h1>
+
+        <div class="review-top-details">
+            <p>Written on: {{review.date}}</p>
+
+            <p id="positivity">Positivity: {{review.sentiment}}</p>
+        </div>
+
+        <h2>{{review.title}}</h2>
+        <hr>
+        <div class="review-detail">
+            <p>" {{review.review}}"</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

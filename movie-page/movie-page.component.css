@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: auto;
+}
+
+.analysis-display {
+    display: grid;
+    grid-template-columns: 20rem auto auto;
+    grid-row: auto auto;
+    padding: auto;
+}
+
+.reviews-display {
+    border: 5px solid #ff7d00;
+    margin-top: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.movie-cover {
+    width: 16rem;
+    height: 22rem;
+    border: 2px;
+    margin: 2rem;
+    font-family: 'Trebuchet MS';
+    font-size: 1.5rem;
+    font-weight: bolder;
+    box-shadow: .3rem .3rem .5rem grey;
+    background-color: #d8d8d8;
+    overflow-wrap: break-word;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 1.97rem;
+    margin-right: 1.97rem;
+    background-color: #ff7d00;
+}
+
+div.empty {
+    height: 1rem;
+    padding: 2rem;
+}
