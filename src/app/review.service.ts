@@ -5,7 +5,6 @@ import { Observable, of } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 import { Review } from './review';
-import { REVIEWS } from './fake-reviews';
 
 @Injectable({
   providedIn: 'root'
