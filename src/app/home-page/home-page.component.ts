@@ -9,10 +9,22 @@ import { Options } from '../options';
 })
 export class HomePageComponent implements OnInit {
 
-  options: Options = {
+  homeOptions: Options = {
     header: "Things to Watch",
     query: "",
-    onHomepage: true
+    location: "Home"
+  };
+
+  lowOptions: Options = {
+    header: "Lowest Ratings",
+    query: "",
+    location: "Lowest"
+  };
+
+  highOptions: Options = {
+    header: "Highest Ratings",
+    query: "",
+    location: "Highest"
   };
 
   constructor() { }

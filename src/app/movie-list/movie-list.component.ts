@@ -22,10 +22,19 @@ export class MovieListComponent implements OnInit {
   }
 
   getMovies(): void{
-    if (this.options?.onHomepage){
-      this.movieService.getHomepage().subscribe(movies => this.movies = movies);  
-    }else{
-      this.movieService.getMovies(this.options?.query).subscribe(movies => this.movies = movies);
+    switch(this.options?.location){
+      case "Home":
+        this.movieService.getHomepage().subscribe(movies => this.movies = movies);
+        break;
+      case "Lowest":
+        this.movieService.getLowestSentiment().subscribe(movies => this.movies = movies);
+        break;
+      case "Highest":
+        this.movieService.getHighestSentiment().subscribe(movies => this.movies = movies);
+        break;
+      case "Search":
+        this.movieService.getMovies(this.options?.query).subscribe(movies => this.movies = movies);
     }
+
   }
 }

@@ -19,3 +19,18 @@ button:hover {
     border-color: #ff7d00;
     background-color: #c2c2c2;
 }
+
+img{
+    width: 9rem;
+    height: 14rem;
+
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: .3rem .3rem .5rem grey;
+    overflow-wrap: break-word;
+    object-fit: cover;
+}
+
+img:hover {
+    border-radius: 0px 30px 0px 0px;
+}

@@ -1,3 +1,4 @@
 <div *ngIf="movie" class="movie">
-    <button routerLink="/movie/{{movie.ref_num}}">{{movie.name}}</button>
+    <button *ngIf="movie.poster_url; else titleBlock" routerLink="/movie/{{movie.ref_num}}"><img src={{movie.poster_url}}></button>
+    <ng-template #titleBlock><button routerLink="/movie/{{movie.ref_num}}">{{movie.name}}</button></ng-template>
 </div>

@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 
 import { Movie } from './movie';
-import { MOVIES } from './fake-movies';
+
 
 @Injectable({
   providedIn: 'root'
@@ -43,4 +43,23 @@ export class MovieService {
     console.log(moviesUrl + movieid.toString())
     return this.http.get<Movie>(moviesUrl + movieid.toString(), header_node)
   }
+
+  getHighestSentiment(): Observable<Movie[]>{
+    const highestUrl = 'https://www.reviewsense.net/movies/highest'
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    return this.http.get<Movie[]>(highestUrl, header_node)
+  }
+
+  getLowestSentiment(): Observable<Movie[]>{
+    const lowestUrl = 'https://www.reviewsense.net/movies/lowest'
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    return this.http.get<Movie[]>(lowestUrl, header_node)
+  }
+
 }
