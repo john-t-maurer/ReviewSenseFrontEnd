@@ -23,6 +23,16 @@ export class ReviewService {
     return this.http.get<Review[]>(reviewsUrl + movieid, header_node)
   }
 
+  getKeywords(movieid: number): Observable<[]> {
+    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/keywords?movie_id='
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+    console.log(reviewsUrl + movieid)
+    return this.http.get<[]>(reviewsUrl + movieid, header_node)
+  }
+
   getReview(reviewid: string): Observable<Review>{
     const reviewsUrl = 'https://www.reviewsense.net/reviews?review_id='
     let header_node = {
