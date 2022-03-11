@@ -1,8 +1,14 @@
 <div *ngIf="options">
     <h1>{{options.header}}</h1>
-    <div class="movie-list">
-        <div *ngFor="let movie of movies">
-            <app-movie *ngIf="movie.name.includes(options.query)" [movie]="movie"></app-movie>
-        </div>
+
+    <div class="carousel-wrap">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let movie of movies">
+                <ng-template carouselSlide [width]="200" [id]="movie.name">
+                    <app-movie *ngIf="movie.name.includes(options.query)" [movie]="movie"></app-movie>
+                </ng-template>
+            </ng-container>
+
+        </owl-carousel-o>
     </div>
 </div>

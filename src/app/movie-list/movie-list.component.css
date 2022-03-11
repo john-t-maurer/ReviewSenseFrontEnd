@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 h1 {
@@ -10,4 +11,40 @@ h1 {
     padding: 1rem;
     padding-left: 2rem;
     margin: auto;
+}
+
+.carousel-wrap {
+    height: 100;
+    width: 95%;
+    padding: auto;
+    margin: auto;
+    z-index: 1;
+    overflow: visible;
+    position: relative;
+}
+
+div.movie {
+    overflow: visable;
+}
+
+owl-carousel-o {
+    position: relative;
+    overflow: visable;
+}
+
+ng-container {
+    position: relative;
+    overflow: visable;
+    z-index: 0;
+}
+
+ng-template {
+    position: relative;
+    overflow: visable;
+    z-index: 0;
+}
+
+app-movie {
+    z-index: 0;
+    overflow: visable;
 }

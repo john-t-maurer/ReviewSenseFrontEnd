@@ -12,6 +12,7 @@ button {
     box-shadow: .3rem .3rem .5rem grey;
     overflow-wrap: break-word;
     text-align: center;
+    z-index: 1;
 }
 
 button:hover {
@@ -19,6 +20,7 @@ button:hover {
     border-style: solid;
     border-color: #ff7d00;
     background-color: #c2c2c2;
+    z-index: 0;
 }
 
 img {
@@ -31,9 +33,14 @@ img {
     box-shadow: .3rem .3rem .5rem grey;
     overflow-wrap: break-word;
     object-fit: cover;
+    z-index: 1;
 }
 
-.movie .MovieInfo {
+div.movie {
+    z-index: 1;
+}
+
+div.movie div.MovieInfo {
     visibility: hidden;
     font-size: 1.5rem;
     width: 30rem;
@@ -44,21 +51,32 @@ img {
     overflow-wrap: break-word;
     padding: 10px 0;
     border-radius: 12px;
-    position: absolute;
-    z-index: 1;
+    z-index: 999999;
     opacity: 0;
     transition: opacity 1s;
 }
 
-.movie:hover .MovieInfo {
+.movie:hover div.MovieInfo {
     visibility: visible;
     opacity: 1;
+    z-index: 999999;
 }
 
 img:hover {
     border-radius: 0px 30px 0px 0px;
+    z-index: 1;
 }
 
 hr {
     color: #ff7d00;
+}
+
+div.movie {
+    overflow: visable;
+    z-index: 0;
+}
+
+div.movie-wrapper {
+    display: flex;
+    flex-direction: row;
 }

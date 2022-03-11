@@ -19,3 +19,7 @@ div app-body {
     padding: auto;
     margin: auto;
 }
+
+.MovieInfo {
+    z-index: 999;
+}
