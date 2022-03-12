@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
@@ -18,6 +18,8 @@ export class MovieListComponent implements OnInit {
   // The currently hovered movie
   activeMovie: Movie | null = null;
   movies: Movie[] = [];
+
+  @ViewChild('wrapper') wrapper!: ElementRef;
 
   // The x and y coordinates of the movieInfoPopup
   x = '0';
@@ -79,9 +81,14 @@ export class MovieListComponent implements OnInit {
    */
   setActiveMovie(hoverEvent: HoverEvent | null) {
     if (hoverEvent) {
+
+      let currentRect = this.wrapper.nativeElement.getBoundingClientRect();
+      let x = hoverEvent.x - currentRect.x;
+      let y = hoverEvent.y - currentRect.y;
+
       this.activeMovie = hoverEvent.movie;
-      this.x = `${hoverEvent.x}px`;
-      this.y = `${hoverEvent.y}px`;
+      this.x = `${x}px`;
+      this.y = `${y}px`;
     } else {
       this.activeMovie = null;
       this.x = '0';

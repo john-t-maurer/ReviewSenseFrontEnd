@@ -34,8 +34,8 @@ export class MovieComponent implements OnInit {
       this.onHoverChanged.emit(
         {
           movie: this.movie,
-          x: rect.left,
-          y: rect.top
+          x: rect.x,
+          y: rect.y
         } as HoverEvent
       );
     } else {
