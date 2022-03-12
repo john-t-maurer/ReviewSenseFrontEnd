@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    z-index: 1;
 }
 
 h1 {
@@ -15,7 +14,6 @@ h1 {
 
 .carousel-wrap {
     height: 100;
-    width: 95%;
     padding: auto;
     margin: auto;
     z-index: 1;
@@ -27,24 +25,13 @@ div.movie {
     overflow: visable;
 }
 
-owl-carousel-o {
-    position: relative;
-    overflow: visable;
-}
-
-ng-container {
-    position: relative;
-    overflow: visable;
-    z-index: 0;
-}
-
-ng-template {
-    position: relative;
-    overflow: visable;
-    z-index: 0;
-}
-
-app-movie {
-    z-index: 0;
-    overflow: visable;
+.MovieInfo{
+    position: absolute;
+    width: 30rem;
+    height: 14rem;
+    z-index: 999;
+    background: white;
+    border-radius: 15px;   
+    border: 1px solid black;
+    padding: 10px;
 }
