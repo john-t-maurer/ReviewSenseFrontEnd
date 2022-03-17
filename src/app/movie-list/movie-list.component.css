@@ -26,13 +26,23 @@ div.movie {
     overflow: visable;
 }
 
-.MovieInfo{
+.MovieInfo {
     position: absolute;
     width: 30rem;
     height: 14rem;
     z-index: 999;
     background: white;
-    border-radius: 15px;   
+    border-radius: 15px;
     border: 1px solid black;
     padding: 10px;
+}
+
+h3.movie-overview {
+    font-size: 12;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
