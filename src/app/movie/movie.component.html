@@ -1,3 +1,4 @@
+
 <div class="movie-wrapper" (mouseenter)="setActiveHover(true)" (mouseleave)="setActiveHover(false)" #wrapper>
     <div *ngIf="movie" class="movie" [class.active]="activeHover">
         <button *ngIf="movie.poster_url; else titleBlock" routerLink="/movie/{{movie.ref_num}}" [class.active]="activeHover">
@@ -10,5 +11,4 @@
             </button>
         </ng-template>
     </div>
-
 </div>

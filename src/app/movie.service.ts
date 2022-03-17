@@ -14,6 +14,7 @@ export class MovieService {
   constructor(private http: HttpClient) { }
 
   getMovies(query?: String): Observable<Movie[]> {
+    query = query?.replace('\'','\"')
     const moviesUrl = 'https://www.reviewsense.net/moviesearches?title='
     let header_node = {
       headers: new HttpHeaders(
