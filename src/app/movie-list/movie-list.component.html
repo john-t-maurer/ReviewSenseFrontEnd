@@ -1,8 +1,21 @@
-<div *ngIf="options">
+<div *ngIf="options" style="position: relative;" #wrapper>
     <h1>{{options.header}}</h1>
-    <div class="movie-list">
-        <div *ngFor="let movie of movies">
-            <app-movie *ngIf="movie" [movie]="movie"></app-movie>
-        </div>
+
+    <div [style.transform]="'translate(' + this.x + ', ' + this.y + ')'" class="MovieInfo"
+        [hidden]="activeMovie === null">
+        <h2>{{activeMovie?.name}}</h2>
+        <hr>
+        <h3>(Breif movie information here)</h3>
+    </div>
+    <div class="carousel-wrap">
+        <owl-carousel-o [options]="customOptions">
+            <ng-container *ngFor="let movie of movies" style="width:200px">
+                <ng-template carouselSlide [id]="movie.name" [width]="200">
+                    <app-movie *ngIf="movie.name.includes(options.query)" [movie]="movie"
+                        (onHoverChanged)="this.setActiveMovie($event)"></app-movie>
+                </ng-template>
+            </ng-container>
+
+        </owl-carousel-o>
     </div>
 </div>

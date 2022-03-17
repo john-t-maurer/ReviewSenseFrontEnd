@@ -1,8 +1,14 @@
-<div *ngIf="movie" class="movie">
-    <button *ngIf="movie.poster_url; else titleBlock" routerLink="/movie/{{movie.ref_num}}"><img src={{movie.poster_url}}></button>
-    <ng-template #titleBlock><button routerLink="/movie/{{movie.ref_num}}">{{movie.name}}</button></ng-template>
-    <span class="MovieInfo">{{movie.name}}
-        <hr>
-        <h3>{{movie.overview}}</h3>
-    </span>
+
+<div class="movie-wrapper" (mouseenter)="setActiveHover(true)" (mouseleave)="setActiveHover(false)" #wrapper>
+    <div *ngIf="movie" class="movie" [class.active]="activeHover">
+        <button *ngIf="movie.poster_url; else titleBlock" routerLink="/movie/{{movie.ref_num}}" [class.active]="activeHover">
+            <img src={{movie.poster_url}} [class.active]="activeHover">
+        </button>
+
+        <ng-template #titleBlock>
+            <button routerLink="/movie/{{movie.ref_num}}">
+                {{movie.name}}
+            </button>
+        </ng-template>
+    </div>
 </div>
