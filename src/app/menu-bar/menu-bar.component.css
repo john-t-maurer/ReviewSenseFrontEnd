@@ -8,6 +8,7 @@ div.menu-bar {
 
 h1 {
     font-size: 45px;
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
     color: aliceblue;
 }
@@ -28,9 +29,11 @@ body {
 
 h3 {
     color: aliceblue;
+    font-family: 'Roboto', sans-serif;
     font-size: 30px;
 }
 
 h2 {
+    font-family: 'Roboto', sans-serif;
     color: aliceblue;
 }

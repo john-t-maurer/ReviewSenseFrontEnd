@@ -4,6 +4,7 @@
 
 body {
     background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
     margin: 2rem 1rem 2rem 1rem;
     font-size: 20px;
 }
@@ -17,17 +18,20 @@ div {
 h1 {
     margin: auto;
     background-color: #ff7d00;
+    font-family: 'Roboto', sans-serif;
     border-radius: 10px 10px 0px 0px;
     padding: 1rem 1rem 1rem 2rem;
 }
 
 h2 {
     margin: auto;
+    font-family: 'Roboto', sans-serif;
     padding: 1rem 1rem 1rem 2rem;
     color: #ff7d00
 }
 
 div.review-top-details {
+    font-family: 'Roboto', sans-serif;
     font-style: italic;
     background-color: white;
     font-size: 20px;
@@ -36,6 +40,7 @@ div.review-top-details {
 }
 
 div.review-detail {
+    font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
     margin: auto;
     padding: .5rem 1rem 1rem 4rem;

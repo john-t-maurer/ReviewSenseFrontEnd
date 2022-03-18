@@ -8,6 +8,7 @@ h1 {
     background-color: whitesmoke;
     color: #ff7d00;
     padding: 1rem;
+    font-family: 'Roboto', sans-serif;
     padding-left: 2rem;
     margin: auto;
 }
@@ -30,6 +31,7 @@ div.movie {
     position: absolute;
     width: 30rem;
     height: 14rem;
+    font-family: 'Roboto', sans-serif;
     z-index: 999;
     background: white;
     border-radius: 15px;
@@ -39,6 +41,7 @@ div.movie {
 
 h3.movie-overview {
     font-size: 12;
+    font-family: 'Roboto', sans-serif;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
