@@ -4,47 +4,36 @@
     <title>Movie | ReviewSense</title>
 
 </head>
-<html>
 
-<body>
-    <div class="analysis-display">
-        <div class="poster-title-wrapper">
-            <div>
-                <h2 class="movie-name">
-                    {{movie?.name}}
-                </h2>
-            </div>
-            <div class="movie-cover">
-                <span *ngIf="movie">
-                    <div *ngIf="movie.poster_url else titleDisplay">
-                        <img src={{movie.poster_url}}>
-                    </div>
-                    <ng-template #titleDisplay>{{movie.name}}</ng-template>
-                </span>
-            </div>
-
+<div class="analysis-display">
+    <div class="poster-title-wrapper">
+        <div>
+            <h2 class="movie-name">
+                {{movie?.name}}
+            </h2>
         </div>
-        <!--Conditional display of components based on routing ID.-->
-
-        <div class="combined-display-wrapper">
-            <div>
-                <app-combined-display *ngIf="display === 0"></app-combined-display>
-            </div>
-            <div>
-                <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>
-            </div>
-            <div>
-                <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>
-            </div>
+        <div class="movie-cover">
+            <span *ngIf="movie">
+                <div *ngIf="movie.poster_url else titleDisplay">
+                    <img src={{movie.poster_url}}>
+                </div>
+                <ng-template #titleDisplay>{{movie.name}}</ng-template>
+            </span>
         </div>
-    </div>
-    <h1>List of Reviews</h1>
-    <div class="reviews-display">
-        <app-review-list [options]="movieOptions"></app-review-list>
-    </div>
-    <div class="empty">
 
     </div>
-</body>
+    <!--Conditional display of components based on routing ID.-->
 
-</html>
+    <div class="combined-display-wrapper">
+
+        <app-combined-display></app-combined-display>
+
+    </div>
+</div>
+<h1>List of Reviews</h1>
+<div class="reviews-display">
+    <app-review-list [options]="movieOptions"></app-review-list>
+</div>
+<div class="empty">
+
+</div>
