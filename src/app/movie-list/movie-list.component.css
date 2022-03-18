@@ -49,3 +49,10 @@ h3.movie-overview {
     /* number of lines to show */
     -webkit-box-orient: vertical;
 }
+
+h4.movie-title-card {
+    font-size: 8;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    padding: 10px;
+}

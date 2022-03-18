@@ -56,3 +56,17 @@ div.empty {
     height: 1rem;
     padding: 2rem;
 }
+
+div.poster-title-wrapper {
+    margin-left: 3rem;
+    padding: auto;
+}
+
+h2.movie-name {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3rem;
+}
+
+div.combined-display-wrapper {
+    margin-left: 5rem;
+}
