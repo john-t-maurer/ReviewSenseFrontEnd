@@ -1,53 +1,23 @@
 .combined-display {
-    margin: auto;
-    padding: auto;
-    display: grid;
-    grid-template-columns: 30rem 30rem;
-    grid-template-rows: auto auto;
-    justify-items: stretch;
+    margin: 2rem;
 }
 
-.metadata {
-    text-align: left;
-    margin: auto;
-    padding: auto;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 80rem;
+.pie-and-words {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
 }
 
 .pie {
-    margin: auto;
-    padding: auto;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    width: 30rem;
-    height: 40rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .words {
-    margin: auto;
-    padding: auto;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    height: 40rem;
-    width: 50rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 h1 {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin: auto;
-    padding: auto;
-}
-
-p {
-    text-align: center;
     font-family: 'Roboto', sans-serif;
 }

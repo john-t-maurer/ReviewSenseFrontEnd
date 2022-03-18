@@ -10,9 +10,9 @@ body {
 
 .analysis-display {
     display: grid;
-    grid-template-columns: 25rem auto;
+    grid-template-columns: 20rem auto auto;
+    grid-row: auto auto;
     padding: auto;
-    justify-content: stretch;
 }
 
 .reviews-display {
@@ -37,7 +37,6 @@ body {
     overflow-wrap: break-word;
     text-align: center;
     display: flex;
-    justify-content: stretch;
     justify-content: center;
     align-items: center;
 }
@@ -66,4 +65,8 @@ div.poster-title-wrapper {
 h2.movie-name {
     font-family: 'Roboto', sans-serif;
     padding-left: 3rem;
+}
+
+div.combined-display-wrapper {
+    margin-left: 5rem;
 }
