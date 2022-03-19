@@ -29,6 +29,12 @@ export class ReviewListComponent implements OnInit {
     switch(this.options?.location){
       case "Movie": 
         this.reviewService.getReviews(Number(this.route.snapshot.paramMap.get('movieid'))).subscribe(reviews => this.reviews = reviews);
+        break;
+      case "Sentiment":
+        this.reviewService.getSentimentReviews([Number(this.route.snapshot.paramMap.get('movieid')), String(this.route.snapshot.paramMap.get('sentiment'))]).subscribe(reviews => this.reviews = reviews);
+        break;
+      case "Frequency":
+        this.reviewService.getKeywordReviews([Number(this.route.snapshot.paramMap.get('movieid')), String(this.route.snapshot.paramMap.get('word'))]).subscribe(reviews => this.reviews = reviews);
     }
   }
 

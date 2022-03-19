@@ -42,4 +42,31 @@ export class ReviewService {
     console.log(reviewsUrl + reviewid)
     return this.http.get<Review>(reviewsUrl + reviewid, header_node)
   }
+
+  getSentimentReviews(params: any): Observable<Review[]>{
+    const movie_id = params[0]
+    const sentiment = params[1]
+    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/sentiment?movie_id='+movie_id+"&sentiment="+sentiment
+    console.log(reviewsUrl)
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+
+    return this.http.get<Review[]>(reviewsUrl, header_node)
+  }
+
+  getKeywordReviews(params: any): Observable<Review[]>{
+    const movie_id = params[0]
+    const keyword = params[1]
+    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/keymatch?movie_id='+movie_id+"&keyword="+keyword
+    console.log(reviewsUrl)
+    let header_node = {
+      headers: new HttpHeaders(
+          { 'rejectUnauthorized': 'false' })
+      };
+
+    return this.http.get<Review[]>(reviewsUrl, header_node)
+  }
+
 }

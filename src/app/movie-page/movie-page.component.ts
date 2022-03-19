@@ -43,9 +43,11 @@ export class MoviePageComponent implements OnInit {
   generateDisplay(): void{
     if (this.location.path().includes("sentiment")){
       this.display = 1;
+      this.movieOptions.location = 'Sentiment'
 
     }else if (this.location.path().includes("frequency")){
       this.display = 2;
+      this.movieOptions.location = 'Frequency'
 
     }else{
       this.display = 0;
