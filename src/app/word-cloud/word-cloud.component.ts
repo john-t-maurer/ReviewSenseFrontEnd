@@ -47,7 +47,7 @@ export class WordCloudComponent implements OnInit {
       return { text: d[0], value: parseInt(d[1])};
     }))
 
-    console.log(this.data)
+    
     
   }
 }

@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
 import { ReviewService } from '../review.service';
+import { Options } from 'options';
 
 @Component({
   selector: 'app-pie-chart',
@@ -33,8 +34,7 @@ export class PieChartComponent implements OnInit {
         },
         color: ['#1EE15F', '#F5856A'],
         data: [
-          { value: 5, name: 'Positive' },
-          { value: 5, name: 'Negative' }
+
         ]
       }
     ]
@@ -50,30 +50,31 @@ export class PieChartComponent implements OnInit {
     private reviewService: ReviewService
   ) {  }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+    this.pieOptions = this.getSentimentValues(this.pieOptions);
+    console.log(this.pieOptions)
     this.getMovie();
-    console.log(this.pieOptions.series[0].data.push(this.getSentimentValues()))
     
-    console.log(this.pieOptions.series[0].data)
 
   }
 
-  getSentimentValues(): Array<any>{
+  getSentimentValues(pieOptions :any): any{
+    
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));
     var count = 0
     var sentiment = ''
-    var data :any = []
-    this.reviewService.getPieChart(id).subscribe((res: any) => this.pieOptions.series[0].data! = res.map(function (d: any){
-      var sentiment = Object.keys(d)[0]
-      var count = Number(d[Object.keys(d)[0]])
+    var response :any = []
 
-      data.push({ value: count, name: String(sentiment)});
-     
+    this.reviewService.getPieChart(id).subscribe((res :any) => res.map((entry :any) => {
+       pieOptions.series[0].data.push({value: entry.value, name: entry.name})
 
+    }
+    ))
+    
 
-    }))
-
-    return data
+    
+    
+    return pieOptions
     
   }
 
