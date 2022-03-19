@@ -3,9 +3,11 @@
 
     <div [style.transform]="'translate(' + this.x + ', ' + this.y + ')'" class="MovieInfo" [hidden]="activeMovie === null">
         <h2>{{activeMovie?.name}}</h2>
+        <p>Screen width: {{ screenWidth }}</p>
         <hr>
         <h3 class="movie-overview">{{activeMovie?.overview}}</h3>
     </div>
+
     <div class="carousel-wrap">
         <owl-carousel-o [options]="customOptions">
             <ng-container *ngFor="let movie of movies" style="width:200px">
