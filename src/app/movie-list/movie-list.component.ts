@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostListener  } from '@angular/core';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
 import { Options } from '../options';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HoverEvent } from '../HoverEvent';
+import { AngularD3CloudComponent } from 'angular-d3-cloud';
 
 @Component({
   selector: 'app-movie-list',
@@ -24,6 +25,8 @@ export class MovieListComponent implements OnInit {
   // The x and y coordinates of the movieInfoPopup
   x = '0';
   y = '0';
+  public screenWidth: any;
+  public screenHeight: any;
 
   constructor(
     private movieService: MovieService,
@@ -31,6 +34,8 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
   }
 
   customOptions: OwlOptions = {
@@ -85,14 +90,31 @@ export class MovieListComponent implements OnInit {
       let currentRect = this.wrapper.nativeElement.getBoundingClientRect();
       let x = hoverEvent.x - currentRect.x;
       let y = hoverEvent.y - currentRect.y;
+      let width = this.screenWidth;
+    
 
       this.activeMovie = hoverEvent.movie;
-      this.x = `${x}px`;
-      this.y = `${y}px`;
+
+      if((hoverEvent.x + 500)> (width)) {
+        this.x = `${hoverEvent.x - (width - hoverEvent.x)}px` ;
+      } else {
+        this.x = `${x}px`;
+      }   
+      this.y = `${y + 20}px`;
     } else {
       this.activeMovie = null;
       this.x = '0';
       this.y = '0';
     }
+  }
+
+  @HostListener('window:resize', ['$event'])
+
+  onResize(event: any) {
+
+    this.screenWidth = window.innerWidth;
+
+    this.screenHeight = window.innerHeight;
+
   }
 }
