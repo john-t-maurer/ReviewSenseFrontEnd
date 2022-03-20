@@ -57,7 +57,7 @@ export class PieChartComponent implements OnInit {
     private reviewService: ReviewService
   ) {  
     
-    setTimeout(()=>this.getSentimentValues(), 250)}
+    setTimeout(()=>this.getSentimentValues(), 500)}
 
   ngOnInit(): void{
     
