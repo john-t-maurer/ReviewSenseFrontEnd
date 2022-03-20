@@ -11,7 +11,7 @@
         <owl-carousel-o [options]="customOptions">
             <ng-container *ngFor="let movie of movies" style="width:200px">
                 <ng-template carouselSlide [id]="movie.name" [width]="200">
-                    <app-movie *ngIf="movie.name.includes(options.query)" [movie]="movie" (onHoverChanged)="this.setActiveMovie($event)"></app-movie>
+                    <app-movie [movie]="movie" (onHoverChanged)="this.setActiveMovie($event)"></app-movie>
                     <div>
                         <h4 class="movie-title-card">{{movie.name}}</h4>
                     </div>
