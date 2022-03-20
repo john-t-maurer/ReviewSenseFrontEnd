@@ -5,6 +5,8 @@ import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
 import { ReviewService } from '../review.service';
 import { Options } from 'options';
+import { EChartsOption } from 'echarts';
+
 
 @Component({
   selector: 'app-pie-chart',
@@ -15,7 +17,11 @@ export class PieChartComponent implements OnInit {
 
   @Input() movie?: Movie;
 
-  pieOptions: any = {
+  mergeOptions = {};
+
+  dataUpdate: Array<any> = [];
+
+  pieOptions: EChartsOption = {
     tooltip: {
       trigger: 'item'
     },
@@ -34,7 +40,8 @@ export class PieChartComponent implements OnInit {
         },
         color: ['#1EE15F', '#F5856A'],
         data: [
-
+          { value: 5, name: 'Positive' },
+          { value: 5, name: 'Negative' }
         ]
       }
     ]
@@ -48,33 +55,60 @@ export class PieChartComponent implements OnInit {
     private actRoute: ActivatedRoute,
     private movieService: MovieService,
     private reviewService: ReviewService
-  ) {  }
+  ) {  
+    
+    setTimeout(()=>this.getSentimentValues(), 250)}
 
   ngOnInit(): void{
-    this.pieOptions = this.getSentimentValues(this.pieOptions);
-    console.log(this.pieOptions)
+    
+    
     this.getMovie();
     
+    console.log(this.pieOptions)
+
+    this.getSentimentValues()
+    console.log(this.pieOptions)
 
   }
 
-  getSentimentValues(pieOptions :any): any{
+  getSentimentValues(): void{
     
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));
     var count = 0
     var sentiment = ''
-    var response :any = []
+    var newData :any = []
 
     this.reviewService.getPieChart(id).subscribe((res :any) => res.map((entry :any) => {
-       pieOptions.series[0].data.push({value: entry.value, name: entry.name})
+      console.log(entry)
+      this.dataUpdate.push({value: entry.value, name: entry.name})
 
     }
+
     ))
+    this.mergeOptions = {
+      tooltip: {
+        trigger: 'item'
+      },
+      series: [
+        {
+          name: 'Positivity:',
+          type: 'pie',
+          radius: ['40%', '70%'],
+          avoidLabelOverlap: false,
+          label: {
+            show: false,
+            position: 'center'
+          },
+          labelLine: {
+            show: false
+          },
+          color: ['#1EE15F', '#F5856A'],
+          data: this.dataUpdate
+        }
+      ]
+    };
     
 
-    
-    
-    return pieOptions
     
   }
 
