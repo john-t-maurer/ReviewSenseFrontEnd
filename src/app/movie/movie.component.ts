@@ -22,7 +22,10 @@ export class MovieComponent implements OnInit {
   // Event containing hover details such as what movie and the x/y coordinates
   @Output() onHoverChanged = new EventEmitter<HoverEvent | null>();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+  }
+
+  
 
   ngOnInit(): void {
     this.movie!.name = this.movie!.name.replace('\"','\'')
@@ -48,19 +51,14 @@ export class MovieComponent implements OnInit {
 
   getMetadata(colon?: string){
     const splitter = this.movie?.name.split('(');
-    console.log(splitter)
-
     var title = splitter![0].trim().replace('\"', '\'');
-    if (colon){
-      title = title.split(':')[0]
-      console.log(title)
-    }
+
+    if (colon){title = title.split(':')[0]}
 
     var searchUrl = 'https://api.themoviedb.org/3/search/multi?api_key=f213c4954a309bf85342338cab0ba8a6&language=en-US&query='+ title + '&page=1';
 
     if (splitter!.length > 1){
       var year = splitter![1].replace(')','').replace('-','').trim();
-
       var searchUrl = 'https://api.themoviedb.org/3/search/multi?api_key=f213c4954a309bf85342338cab0ba8a6&language=en-US&query='+ title +'&year=' + year +'&page=1';
     }
 
@@ -71,8 +69,6 @@ export class MovieComponent implements OnInit {
     
     };
     console.log(searchUrl)
-
-
     return this.http.get<JSON>(searchUrl, {responseType:'json'})
   }
 

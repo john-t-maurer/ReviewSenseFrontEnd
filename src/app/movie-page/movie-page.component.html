@@ -28,13 +28,13 @@
 
         <div class="combined-display-wrapper">
             <div>
-                <app-combined-display *ngIf="display === 0"></app-combined-display>
+                <app-combined-display *ngIf="display === 0" [movie]="movie"></app-combined-display>
             </div>
             <div>
-                <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>
+                <app-sentiment-display *ngIf="display === 1"  ></app-sentiment-display>
             </div>
             <div>
-                <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>
+                <app-word-frequency-display *ngIf="display === 2" ></app-word-frequency-display>
             </div>
         </div>
     </div>

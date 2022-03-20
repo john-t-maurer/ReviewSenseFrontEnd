@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Movie } from 'movie';
+import { MovieComponent } from '../movie/movie.component';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-combined-display',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CombinedDisplayComponent implements OnInit {
 
-  constructor() { }
+  @Input() movie? : Movie;
+
+  
+
+  constructor(private http: HttpClient) {
+    
+   }
 
   ngOnInit(): void {
+    
   }
+
+  
+
 
 }
