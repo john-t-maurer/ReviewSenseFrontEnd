@@ -21,12 +21,18 @@ button.active {
 }
 
 img {
+    width: 9rem;
+    height: 14rem;
+    padding: auto;
+    margin: auto;
     transition: 0.3s;
     box-shadow: 0.3rem 0.3rem 0.5rem grey;
     overflow-wrap: break-word;
     object-fit: cover;
     z-index: 1;
 }
+
+
 
 img.active {
     border-radius: 0px 30px 0px 0px;

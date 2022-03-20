@@ -13,15 +13,18 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovies(query?: String): Observable<Movie[]> {
+  getMovies(page?: string, query?: String): Observable<Movie[]> {
+    console.log(query)
     query = query?.replace('\'','\"')
-    const moviesUrl = 'https://www.reviewsense.net/moviesearches?title='
+    console.log(page)
+    
+    const moviesUrl = 'https://www.reviewsense.net/moviesearches?title=' + query + '&page='+ page
     let header_node = {
       headers: new HttpHeaders(
           { 'rejectUnauthorized': 'false' })
       };
     console.log(moviesUrl + query)
-    return this.http.get<Movie[]>(moviesUrl + query, header_node)
+    return this.http.get<Movie[]>(moviesUrl, header_node)
   }
 
   getHomepage(): Observable<Movie[]>{

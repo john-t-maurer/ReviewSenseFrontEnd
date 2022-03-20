@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, HostListener  } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, HostListener, Output, EventEmitter} from '@angular/core';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
@@ -6,6 +6,8 @@ import { Options } from '../options';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HoverEvent } from '../HoverEvent';
 import { AngularD3CloudComponent } from 'angular-d3-cloud';
+
+
 
 @Component({
   selector: 'app-movie-list',
@@ -15,6 +17,8 @@ import { AngularD3CloudComponent } from 'angular-d3-cloud';
 export class MovieListComponent implements OnInit {
 
   @Input() options?: Options;
+
+  @Output() size = new EventEmitter<number>();
 
   // The currently hovered movie
   activeMovie: Movie | null = null;
@@ -34,6 +38,7 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMovies();
+    
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
   }
@@ -64,6 +69,11 @@ export class MovieListComponent implements OnInit {
     nav: true
   }
 
+  getSize(){
+    
+    return (this.movies.length);
+  }
+
   getMovies(): void {
     switch (this.options?.location) {
       case "Home":
@@ -76,7 +86,7 @@ export class MovieListComponent implements OnInit {
         this.movieService.getHighestSentiment().subscribe(movies => this.movies = movies);
         break;
       case "Search":
-        this.movieService.getMovies(this.options?.query).subscribe(movies => this.movies = movies);
+        this.movieService.getMovies(this.options?.page, this.options?.query).subscribe(movies => this.movies = movies);
     }
 
   }
@@ -117,4 +127,6 @@ export class MovieListComponent implements OnInit {
     this.screenHeight = window.innerHeight;
 
   }
+
+ 
 }

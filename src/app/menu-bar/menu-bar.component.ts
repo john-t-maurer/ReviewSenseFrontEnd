@@ -19,7 +19,7 @@ export class MenuBarComponent implements OnInit {
     if(event.keyCode === 13 && this.searchValue !== ""){
       const query = this.searchValue;
       console.log(query);
-      this.router.navigate(['search', query]);
+      this.router.navigate(['search', query, 'page',0]).then(()=> window.location.reload());
     }
   }
 

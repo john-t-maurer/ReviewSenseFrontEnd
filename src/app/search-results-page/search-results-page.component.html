@@ -8,8 +8,25 @@
 
 <body>
     <div>
-        <app-movie-list [options]="searchOptions"></app-movie-list>
+        <app-movie-list id="searchResults" [options]="searchOptions" #searchResults></app-movie-list>
     </div>
+    <div *ngIf="searchOptions.page=='0'; else multiBlock" >
+    
+        <button (click)="nextPage()">Next Page</button>
+    </div>
+
+    <ng-template #multiBlock>
+        <div *ngIf="getSize() > 19; else lastBlock" >
+            <button (click)="lastPage()">Previous Page</button>
+            <button (click)="nextPage()">Next Page</button>
+            
+        </div>
+        <ng-template #lastBlock>
+            <button (click)="lastPage()">Previous Page</button>
+            
+        </ng-template>
+    </ng-template>
+    
 </body>
 
 </html>

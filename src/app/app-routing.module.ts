@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'movie/:movieid/sentiment/:sentiment', component: MoviePageComponent},
   {path: 'movie/:movieid/frequency/:word', component: MoviePageComponent},
   {path: 'review/:reviewid', component: ReviewPageComponent},
-  {path: 'search/:query', component: SearchResultsPageComponent}
+  {path: 'search/:query/page/:page', component: SearchResultsPageComponent}
 ];
 
 @NgModule({
