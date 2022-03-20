@@ -6,7 +6,7 @@
         </button>
 
         <ng-template #titleBlock>
-            <button routerLink="/movie/{{movie.ref_num}}">
+            <button routerLink="/movie/{{movie.ref_num}}" [class.active]="activeHover">
                 {{movie.name}}
             </button>
         </ng-template>
