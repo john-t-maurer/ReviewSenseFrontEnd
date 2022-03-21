@@ -4,29 +4,26 @@
     <title>Search | ReviewSense</title>
 
 </head>
-<html>
-
-<body>
+<div class="search-wrapper">
     <div>
         <app-movie-list id="searchResults" [options]="searchOptions" #searchResults></app-movie-list>
     </div>
-    <div *ngIf="searchOptions.page=='0'; else multiBlock" >
-    
-        <button (click)="nextPage()">Next Page</button>
-    </div>
+    <div class="navagation-buttons">
+        <div *ngIf="searchOptions.page=='0'; else multiBlock">
 
-    <ng-template #multiBlock>
-        <div *ngIf="getSize() > 19; else lastBlock" >
-            <button (click)="lastPage()">Previous Page</button>
-            <button (click)="nextPage()">Next Page</button>
-            
+            <button name="nextPage" (click)="nextPage()">Next Page</button>
         </div>
-        <ng-template #lastBlock>
-            <button (click)="lastPage()">Previous Page</button>
-            
-        </ng-template>
-    </ng-template>
-    
-</body>
 
-</html>
+        <ng-template #multiBlock>
+            <div *ngIf="getSize() > 19; else lastBlock">
+                <button (click)="lastPage()">Previous Page</button>
+                <button (click)="nextPage()">Next Page</button>
+
+            </div>
+            <ng-template #lastBlock>
+                <button (click)="lastPage()">Previous Page</button>
+
+            </ng-template>
+        </ng-template>
+    </div>
+</div>
