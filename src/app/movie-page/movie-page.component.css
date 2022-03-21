@@ -57,11 +57,6 @@ div.empty {
     padding: 2rem;
 }
 
-div.poster-title-wrapper {
-    margin-left: 3rem;
-    padding: auto;
-}
-
 h2.movie-name {
     font-family: 'Roboto', sans-serif;
     padding-left: 3rem;

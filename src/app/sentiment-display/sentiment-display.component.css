@@ -5,3 +5,21 @@ h1 {
 h2 {
     font-family: 'Roboto', sans-serif;
 }
+
+div.word-cloud-wrapper {
+    margin: auto;
+    padding: auto;
+    width: 100%;
+}
+
+.sentiment-display {
+    width: 50rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}

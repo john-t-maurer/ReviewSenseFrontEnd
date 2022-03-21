@@ -1,21 +1,26 @@
 <div class="combined-display">
     <div class="metadata">
-        
+
         <h1>{{movie!.name}}</h1>
         <h2>{{movie!.overview}}</h2>
     </div>
 
     <div class="pie-and-words">
-
         <div class="pie">
-            <h1>Positivity Analysis</h1>
-            <app-pie-chart></app-pie-chart>
+            <h1 class="pie-title">Positivity Analysis</h1>
+            <div class="pie-wrapper">
+                <app-pie-chart>
+
+                </app-pie-chart>
+            </div>
         </div>
         <div class="words">
-            <h1>Frequently Used Words</h1>
+            <h1 class="word-cloud-title">Frequently Used Words</h1>
+            <div class="word-wrapper">
+                <app-word-cloud>
 
-            <app-word-cloud></app-word-cloud>
+                </app-word-cloud>
+            </div>
         </div>
-
     </div>
 </div>
