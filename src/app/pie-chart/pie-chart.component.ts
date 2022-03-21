@@ -24,7 +24,12 @@ export class PieChartComponent implements OnInit {
 
   pieOptions: EChartsOption = {
     tooltip: {
-      trigger: 'item'
+      trigger: 'item',
+      formatter: '{b}: {c} ({d}%)'
+    },
+    legend: {
+      top: '5%',
+      left: 'center'
     },
     series: [
       {
@@ -33,6 +38,21 @@ export class PieChartComponent implements OnInit {
         radius: ['40%', '70%'],
         avoidLabelOverlap: false,
         label: {
+          formatter: 'b|{b}：}{c}  {per|{d}%}  ',
+          rich:{
+            b: {
+              color: '#4C5058',
+              fontSize: 14,
+              fontWeight: 'bold',
+              lineHeight: 33
+            },
+            per: {
+              color: '#fff',
+              backgroundColor: '#4C5058',
+              padding: [3, 4],
+              borderRadius: 4
+            }
+          },
           show: false,
           position: 'center'
         },
