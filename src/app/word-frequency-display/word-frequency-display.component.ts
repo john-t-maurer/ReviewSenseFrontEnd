@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class WordFrequencyDisplayComponent implements OnInit {
 
-  word = this.route.snapshot.paramMap.get('word');
+  word = this.route.snapshot.paramMap.get('word')!;
 
   constructor(private route: ActivatedRoute) { }
 

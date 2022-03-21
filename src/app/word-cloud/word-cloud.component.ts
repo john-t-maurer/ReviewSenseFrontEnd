@@ -13,6 +13,7 @@ import { ReviewService } from '../review.service';
 export class WordCloudComponent implements OnInit {
 
   @Input() movie?: Movie;
+  @Input() sentiment: string = 'neutral'
   
   data = [].map(function (d) {
       return { text: d[0], value: d[1]};
@@ -45,7 +46,7 @@ export class WordCloudComponent implements OnInit {
 
   getKeywords() {
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));  
-    this.reviewService.getKeywords(id).subscribe((res: any) => this.data = res.map(function (d: any){
+    this.reviewService.getKeywords(id, this.sentiment!).subscribe((res: any) => this.data = res.map(function (d: any){
       return { text: d[0], value: parseInt(d[1])};
     })) 
   } 

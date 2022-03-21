@@ -23,24 +23,24 @@ export class ReviewService {
     return this.http.get<Review[]>(reviewsUrl + movieid, header_node)
   }
 
-  getKeywords(movieid: number): Observable<[]> {
-    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/keywords?movie_id='
+  getKeywords(movieid: number, sentiment: string): Observable<[]> {
+    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/keywords?movie_id=' + movieid + "&sentiment=" + sentiment
     let header_node = {
       headers: new HttpHeaders(
           { 'rejectUnauthorized': 'false' })
       };
     console.log(reviewsUrl + movieid)
-    return this.http.get<[]>(reviewsUrl + movieid, header_node)
+    return this.http.get<[]>(reviewsUrl, header_node)
   }
 
-  getPieChart(movieid: number): Observable<[]> {
-    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/sentiment/count?movie_id='
+  getPieChart(movieid: number, keyword: string): Observable<[]> {
+    const reviewsUrl = 'https://www.reviewsense.net/reviewlists/sentiment/count?movie_id=' + movieid + '&keyword=' + keyword
     let header_node = {
       headers: new HttpHeaders(
           { 'rejectUnauthorized': 'false' })
       };
     console.log(reviewsUrl + movieid)
-    return this.http.get<[]>(reviewsUrl + movieid, header_node)
+    return this.http.get<[]>(reviewsUrl, header_node)
   }
 
   getReview(reviewid: string): Observable<Review>{

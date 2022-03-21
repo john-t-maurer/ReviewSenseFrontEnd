@@ -16,6 +16,7 @@ import { EChartsOption } from 'echarts';
 export class PieChartComponent implements OnInit {
 
   @Input() movie?: Movie;
+  @Input() keyword: string = 'null';
 
   mergeOptions = {};
 
@@ -78,7 +79,7 @@ export class PieChartComponent implements OnInit {
     var sentiment = ''
     var newData :any = []
 
-    this.reviewService.getPieChart(id).subscribe((res :any) => res.map((entry :any) => {
+    this.reviewService.getPieChart(id, this.keyword).subscribe((res :any) => res.map((entry :any) => {
       console.log(entry)
       this.dataUpdate.push({value: entry.value, name: entry.name})
 

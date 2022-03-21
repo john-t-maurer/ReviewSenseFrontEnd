@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SentimentDisplayComponent implements OnInit {
 
-  sentiment = this.route.snapshot.paramMap.get('sentiment');
+  sentiment = this.route.snapshot.paramMap.get('sentiment')!;
 
   constructor(private route: ActivatedRoute) { }
 
