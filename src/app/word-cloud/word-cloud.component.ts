@@ -18,6 +18,8 @@ export class WordCloudComponent implements OnInit {
       return { text: d[0], value: d[1]};
     })
 
+  
+
   constructor(
     private router: Router,
     private actRoute: ActivatedRoute,
