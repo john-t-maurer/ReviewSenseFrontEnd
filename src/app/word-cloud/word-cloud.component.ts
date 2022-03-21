@@ -18,7 +18,7 @@ export class WordCloudComponent implements OnInit {
       return { text: d[0], value: d[1]};
     })
 
-  
+
 
   constructor(
     private router: Router,
@@ -44,12 +44,9 @@ export class WordCloudComponent implements OnInit {
   }
 
   getKeywords() {
-    const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));
+    const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));  
     this.reviewService.getKeywords(id).subscribe((res: any) => this.data = res.map(function (d: any){
       return { text: d[0], value: parseInt(d[1])};
-    }))
-
-    console.log(this.data)
-    
-  }
+    })) 
+  } 
 }
