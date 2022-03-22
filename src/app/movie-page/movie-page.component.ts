@@ -43,7 +43,7 @@ export class MoviePageComponent implements OnInit {
     private location: Location,
     private http: HttpClient
   ) { 
-    setTimeout(()=>this.fillMetadata(this.metaData), 250)
+    setTimeout(()=>this.fillMetadata(this.metaData), 3000)
 
   }
 
