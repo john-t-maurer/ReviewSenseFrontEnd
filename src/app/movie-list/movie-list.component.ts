@@ -98,19 +98,21 @@ export class MovieListComponent implements OnInit {
     if (hoverEvent) {
 
       let currentRect = this.wrapper.nativeElement.getBoundingClientRect();
-      let x = hoverEvent.x - currentRect.x;
+      let x = hoverEvent.x - currentRect.x + 190;
       let y = hoverEvent.y - currentRect.y;
       let width = this.screenWidth;
     
 
       this.activeMovie = hoverEvent.movie;
 
-      if((hoverEvent.x + 500)> (width)) {
-        this.x = `${hoverEvent.x - (width - hoverEvent.x)}px` ;
+      if((x + 505) > (width)) {
+        this.x = `${x - (width - (x - 695))}px` ;
       } else {
         this.x = `${x}px`;
       }   
+      
       this.y = `${y + 20}px`;
+
     } else {
       this.activeMovie = null;
       this.x = '0';
