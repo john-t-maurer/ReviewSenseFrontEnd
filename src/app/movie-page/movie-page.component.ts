@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input, ViewChild} from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Movie } from '../movie';
@@ -8,6 +8,7 @@ import { Options } from '../options';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MovieComponent } from '../movie/movie.component';
 import { Observable } from 'rxjs';
+import { ReviewListComponent } from '../review-list/review-list.component';
 
 
 
@@ -28,7 +29,8 @@ export class MoviePageComponent implements OnInit {
   movieOptions: Options = {
     header: "All reviews for " + this.movie?.name,
     query: "",
-    location: "Movie"
+    location: "Movie",
+    page: String(this.route.snapshot.paramMap.get('page'))
   };
 
   display?: Number;
@@ -40,6 +42,7 @@ export class MoviePageComponent implements OnInit {
   constructor(
     private movieService:MovieService,
     private route: ActivatedRoute,
+    private router: Router,
     private location: Location,
     private http: HttpClient
   ) { 
@@ -123,6 +126,44 @@ export class MoviePageComponent implements OnInit {
       dataResponse.subscribe((data:any)=> this.movie!.poster_url = 'https://image.tmdb.org/t/p/w220_and_h330_face'+ data.results[0].poster_path)
       dataResponse.subscribe((data:any)=> this.movie!.overview = data.results[0].overview)
     }
+  }
+
+  nextPage() :void {
+    var page = (Number.parseInt(this.movieOptions.page!) + 1)
+    const id = Number(this.route.snapshot.paramMap.get('movieid'));
+    if (this.route.snapshot.paramMap.get('word') != null){
+      const term = this.route.snapshot.paramMap.get('word')
+      this.router.navigate(['movie', id, 'page',page, 'frequency', term]).then(()=> window.location.reload());
+    }else if(this.route.snapshot.paramMap.get('sentiment')!= null){
+      const sentiment = this.route.snapshot.paramMap.get('sentiment')
+      this.router.navigate(['movie', id, 'page',page, 'sentiment', sentiment]).then(()=> window.location.reload());
+    }else{
+
+      this.router.navigate(['movie', id, 'page',page]).then(()=> window.location.reload());
+    }
+  }
+
+  lastPage() :void {
+    var page = (Number.parseInt(this.movieOptions.page!) - 1)
+    const id = Number(this.route.snapshot.paramMap.get('movieid'));
+    if (this.route.snapshot.paramMap.get('word') != null){
+      const term = this.route.snapshot.paramMap.get('word')
+      this.router.navigate(['movie', id, 'page', page, 'frequency', term]).then(()=> window.location.reload());
+    }else if(this.route.snapshot.paramMap.get('sentiment')!= null){
+      const sentiment = this.route.snapshot.paramMap.get('sentiment')
+      this.router.navigate(['movie', id, 'page' ,page, 'sentiment', sentiment]).then(()=> window.location.reload());
+    }
+    else{
+
+      this.router.navigate(['movie', id, 'page',page]).then(()=> window.location.reload());
+    }
+  }
+
+  @ViewChild('pageResults',{static: true}) input!: ReviewListComponent;
+
+  getSize(){
+    console.log(this.input.getSize())
+    return this.input.getSize()
   }
 
   

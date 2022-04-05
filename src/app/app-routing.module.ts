@@ -9,9 +9,9 @@ import { SearchResultsPageComponent } from './search-results-page/search-results
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomePageComponent},
-  {path: 'movie/:movieid', component: MoviePageComponent},
-  {path: 'movie/:movieid/sentiment/:sentiment', component: MoviePageComponent},
-  {path: 'movie/:movieid/frequency/:word', component: MoviePageComponent},
+  {path: 'movie/:movieid/page/:page', component: MoviePageComponent},
+  {path: 'movie/:movieid/page/:page/sentiment/:sentiment', component: MoviePageComponent},
+  {path: 'movie/:movieid/page/:page/frequency/:word', component: MoviePageComponent},
   {path: 'review/:reviewid', component: ReviewPageComponent},
   {path: 'search/:query/page/:page', component: SearchResultsPageComponent}
 ];

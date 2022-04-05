@@ -95,11 +95,12 @@ export class PieChartComponent implements OnInit {
   getSentimentValues(): void{
     
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));
+    const page = Number(this.actRoute.snapshot.paramMap.get('page'));
     var count = 0
     var sentiment = ''
     var newData :any = []
 
-    this.reviewService.getPieChart(id, this.keyword).subscribe((res :any) => res.map((entry :any) => {
+    this.reviewService.getPieChart(id, page,this.keyword).subscribe((res :any) => res.map((entry :any) => {
       console.log(entry)
       this.dataUpdate.push({value: entry.value, name: entry.name})
 
@@ -141,11 +142,12 @@ export class PieChartComponent implements OnInit {
 
   onClick(event: any){
     const movieId = Number(this.actRoute.snapshot.paramMap.get('movieid'));
+    const page = Number(this.actRoute.snapshot.paramMap.get('page'))
 
     if (event.dataIndex === 0){
-      this.router.navigate(['movie', movieId, 'sentiment', 'positive']);
+      this.router.navigate(['movie', movieId, 'page', page,'sentiment', 'positive']);
     }else if (event.dataIndex === 1){
-      this.router.navigate(['movie', movieId, 'sentiment', 'negative']);
+      this.router.navigate(['movie', movieId, 'page', page, 'sentiment', 'negative']);
     }
   }
 

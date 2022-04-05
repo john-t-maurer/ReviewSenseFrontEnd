@@ -31,10 +31,31 @@
         </div>
     </div>
 </div>
-<h1>List of Reviews</h1>
+<h1>List of Reviews</h1> 
+
 <div class="reviews-display">
-    <app-review-list [options]="movieOptions"></app-review-list>
+    <app-review-list id="pageResults" [options]="movieOptions" #pageResults></app-review-list>
 </div>
+<div class="navagation-buttons">
+    <div *ngIf="movieOptions.page=='0'; else multiBlock">
+        <div *ngIf="getSize() > 19;">
+        <button name="nextPage" (click)="nextPage()">Next Page</button>
+        </div>
+    </div>
+
+    <ng-template #multiBlock>
+        <div *ngIf="getSize() > 19; else lastBlock">
+            <button (click)="lastPage()">Previous Page</button>
+            <button (click)="nextPage()">Next Page</button>
+
+        </div>
+        <ng-template #lastBlock>
+            <button (click)="lastPage()">Previous Page</button>
+
+        </ng-template>
+    </ng-template>
+</div>
+
 <div class="empty">
 
 </div>

@@ -11,7 +11,9 @@
     <div class="navagation-buttons">
         <div *ngIf="searchOptions.page=='0'; else multiBlock">
 
-            <button name="nextPage" (click)="nextPage()">Next Page</button>
+            <div *ngIf="getSize() > 19;">
+                <button name="nextPage" (click)="nextPage()">Next Page</button>
+            </div>
         </div>
 
         <ng-template #multiBlock>

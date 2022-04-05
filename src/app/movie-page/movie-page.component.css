@@ -65,3 +65,19 @@ h2.movie-name {
 div.combined-display-wrapper {
     margin-left: 5rem;
 }
+button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+div.navagation-buttons {
+    height: 5rem;
+    text-align: center;
+}

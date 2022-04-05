@@ -41,11 +41,13 @@ export class WordCloudComponent implements OnInit {
 
   onWordClick(event: any){
     const movieId = Number(this.actRoute.snapshot.paramMap.get('movieid'));
-    this.router.navigate(['movie', movieId, 'frequency', event.word.text]);
+    const page = Number(this.actRoute.snapshot.paramMap.get('page'));
+    this.router.navigate(['movie', movieId, 'page', page,'frequency', event.word.text]);
   }
 
   getKeywords() {
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));  
+    const page = Number(this.actRoute.snapshot.paramMap.get('page'));  
     this.reviewService.getKeywords(id, this.sentiment!).subscribe((res: any) => this.data = res.map(function (d: any){
       return { text: d[0], value: parseInt(d[1])};
     })) 
