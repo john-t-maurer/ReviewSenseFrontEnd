@@ -1,27 +1,60 @@
 # MovieReviewFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+In this senior project, we are tasked with developing a web-based solution that incorporates machine learning on a set of movie reviews to organize them by sentiment. The stakeholders of our project expressed frustrations with the lack of overall analytics for movie reviews provided by existing services. Our team examined the different potential models and decided to use a Naïve Bayes model for our approach. We gathered our data from two Kaggle datasets, one containing labelled data used to train our model, and the other containing unlabelled data to apply labels to using our trained model. Additionally, we established a back-end server with Python Flask to communicate to our SQLite database and send data using HTTP endpoints. This data is then displayed on a front-end website, built with the Angular framework. We present the resulting website as a minimum viable solution to our stakeholder's concerns.
 
-## Development server
+### Requirements
+Our application was built with the following high-level requirements in mind:
+* Build and train a custom non-library dependant algorithm to sentimentalize movie reviews.
+* Display the overall sentiment breakdown of a movie.
+* Let the users search for a particular movie they are interested in.
+* Show popular words used in the reviews of a movie.
+* Display all the reviews for that particular movie for the user to read.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Constraints
+Our application was built under the following constraints:
+* The project must be completed within 32 weeks.
+* The machine learning algorithm must be implemented without the use of external libraries.
+* The project must be hosted online.
+* Due to inaccessability of review APIs, the project utilizes two Kaggle datasets for the sentiment analysis.
 
-## Code scaffolding
+## Demonstration
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Gify]
 
-## Build
+## Front End Documentation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+[Figure out that crap using that one website]
 
-## Running unit tests
+## Back End Documentation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+You can find the back end documentation in [this repository].
 
-## Running end-to-end tests
+## Software Stack & Diagrams
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[Add in diagrams with description]
 
-## Further help
+## Build With
+* Python - [Version]
+* SQLite - [Version]
+* Python Flask - [Version]
+* Angular - [Version]
+* Node.js - [Version]
+* Node Package Manager - [Version]
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Hosted with Amazon Web Services.
+
+## Authors
+* Carrie West - Back End Developer / Database Architect
+* Dalton Senseman - Machine Learning / Front End Developer
+* John Maurer - Front End Developer / Angular Architect
+
+## Acknowledgements
+We would like to thank the following people for making this project possible:
+* Tyler Dalbora - CallMiner Representative / Project Manager
+* Anna Koufakou - Ph.D. Computer Engineering - Machine Learning Expertise
+* Fernando Gonzalez - Ph.D. Electrical Engineering - Course Instructor
+* Huzefa Kagdi - Ph.D. Software Engineering - Interim Dean / Course Instructor
+
+### Stakeholders
+* CallMiner
+* Florida Gulf Coast University
