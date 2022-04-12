@@ -1,0 +1,1319 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>movie-review-front-end documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">movie-review-front-end documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  MoviePageComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/movie-page/movie-page.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Represents the movie page.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-movie-page</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./movie-page.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./movie-page.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#display" >display</a>
+                            </li>
+                            <li>
+                                <a href="#input" >input</a>
+                            </li>
+                            <li>
+                                <a href="#metaData" >metaData</a>
+                            </li>
+                            <li>
+                                <a href="#movieOptions" >movieOptions</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fillMetadata" >fillMetadata</a>
+                            </li>
+                            <li>
+                                <a href="#generateDisplay" >generateDisplay</a>
+                            </li>
+                            <li>
+                                <a href="#getMetadata" >getMetadata</a>
+                            </li>
+                            <li>
+                                <a href="#getMovie" >getMovie</a>
+                            </li>
+                            <li>
+                                <a href="#getSize" >getSize</a>
+                            </li>
+                            <li>
+                                <a href="#goBack" >goBack</a>
+                            </li>
+                            <li>
+                                <a href="#lastPage" >lastPage</a>
+                            </li>
+                            <li>
+                                <a href="#nextPage" >nextPage</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#movie" >movie</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="movie"></a>
+                        <b>movie</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Movie.html" target="_self" >Movie</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/movie-page/movie-page.component.ts:24</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The movie associated with this page.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fillMetadata"></a>
+                    <span class="name">
+                        <span ><b>fillMetadata</b></span>
+                        <a href="#fillMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>fillMetadata(dataResponse: Observable<JSON>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:125</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Interprets the results from getMetadata() and configures how the movie page is generated as a result.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dataResponse</td>
+                                    <td>
+                                            <code>Observable&lt;JSON&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The JSON response recieved from getMetadata().</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="generateDisplay"></a>
+                    <span class="name">
+                        <span ><b>generateDisplay</b></span>
+                        <a href="#generateDisplay"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>generateDisplay()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="76"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:76</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Generates the display to use based on this movie page based on the URL.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMetadata"></a>
+                    <span class="name">
+                        <span ><b>getMetadata</b></span>
+                        <a href="#getMetadata"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMetadata(colon?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:96</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Obtains the movie&#39;s metadata, such as its poster art, release year, and description.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colon</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>A parameter that instructs the function to trim the title if it contains a colon.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the movie&#39;s metadata.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovie"></a>
+                    <span class="name">
+                        <span ><b>getMovie</b></span>
+                        <a href="#getMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMovie()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="67"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:67</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the movie this movie page is associated with.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSize"></a>
+                    <span class="name">
+                        <span ><b>getSize</b></span>
+                        <a href="#getSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="189"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:189</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the size of the review list in the ReviewListComponent.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the size of the review list.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="goBack"></a>
+                    <span class="name">
+                        <span ><b>goBack</b></span>
+                        <a href="#goBack"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>goBack()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="197"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:197</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instructs the router to go to the previously loaded page.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="lastPage"></a>
+                    <span class="name">
+                        <span ><b>lastPage</b></span>
+                        <a href="#lastPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>lastPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="168"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:168</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Navigates to the previous list of results.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nextPage"></a>
+                    <span class="name">
+                        <span ><b>nextPage</b></span>
+                        <a href="#nextPage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>nextPage()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="150"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:150</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Navigates to the next list of results.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/movie-page/movie-page.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initializes the movie page.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="display"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>display</b></span>
+                        <a href="#display"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" >Number</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/movie-page/movie-page.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A number representing which display to render.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="input"></a>
+                    <span class="name">
+                        <span ><b>input</b></span>
+                        <a href="#input"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Review.html" target="_self" >ReviewListComponent</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;pageResults&#x27;, {static: true})<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/movie-page/movie-page.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The ReviewListComponent that is associated with this movie page.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="metaData"></a>
+                    <span class="name">
+                        <span ><b>metaData</b></span>
+                        <a href="#metaData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Observable&lt;JSON&gt;</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/movie-page/movie-page.component.ts:27</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The metadata of the movie, including its poster art and description.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="movieOptions"></a>
+                    <span class="name">
+                        <span ><b>movieOptions</b></span>
+                        <a href="#movieOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Options.html" target="_self" >Options</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    header: &quot;All reviews for &quot; + this.movie?.name,
+    query: &quot;&quot;,
+    location: &quot;Movie&quot;,
+    page: String(this.route.snapshot.paramMap.get(&#x27;page&#x27;))
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/movie-page/movie-page.component.ts:30</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The Options directive used to generate this movie page.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewChild} from &#x27;@angular/core&#x27;;
+import { ActivatedRoute, Router } from &#x27;@angular/router&#x27;;
+import { Location } from &#x27;@angular/common&#x27;;
+import { HttpClient, HttpHeaders } from &#x27;@angular/common/http&#x27;;
+
+import { Observable } from &#x27;rxjs&#x27;;
+
+import { Movie } from &#x27;../movie&#x27;;
+import { MovieService } from &#x27;../movie.service&#x27;;
+import { Options } from &#x27;../options&#x27;;
+import { ReviewListComponent } from &#x27;../review-list/review-list.component&#x27;;
+
+/**
+ * Represents the movie page.
+ */
+@Component({
+  selector: &#x27;app-movie-page&#x27;,
+  templateUrl: &#x27;./movie-page.component.html&#x27;,
+  styleUrls: [&#x27;./movie-page.component.css&#x27;]
+})
+export class MoviePageComponent implements OnInit {
+
+  /**The movie associated with this page. */
+  @Input() movie?: Movie;
+
+  /**The metadata of the movie, including its poster art and description. */
+  metaData!: Observable&lt;JSON&gt;;
+
+  /**The Options directive used to generate this movie page. */
+  movieOptions: Options &#x3D; {
+    header: &quot;All reviews for &quot; + this.movie?.name,
+    query: &quot;&quot;,
+    location: &quot;Movie&quot;,
+    page: String(this.route.snapshot.paramMap.get(&#x27;page&#x27;))
+  };
+
+  /**A number representing which display to render. */
+  display?: Number;
+
+  /**The ReviewListComponent that is associated with this movie page. */
+  @ViewChild(&#x27;pageResults&#x27;,{static: true}) input!: ReviewListComponent;
+
+  /**
+   * @ignore
+   */
+  constructor(
+    private movieService:MovieService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private location: Location,
+    private http: HttpClient
+  ) { 
+    setTimeout(()&#x3D;&gt;this.fillMetadata(this.metaData), 3000)
+  }
+
+  /**
+   * Initializes the movie page.
+   */
+  ngOnInit(): void {
+    this.getMovie();
+    this.generateDisplay();
+  }
+
+  /**
+   * Gets the movie this movie page is associated with.
+   */
+  getMovie(): void {
+    const id &#x3D; Number(this.route.snapshot.paramMap.get(&#x27;movieid&#x27;));
+    this.movieService.getMovie(id)
+      .subscribe(movie &#x3D;&gt; this.movie &#x3D; movie);
+  }
+
+  /**
+   * Generates the display to use based on this movie page based on the URL.
+   */
+  generateDisplay(): void{
+    if (this.location.path().includes(&quot;sentiment&quot;)){
+      this.display &#x3D; 1;
+      this.movieOptions.location &#x3D; &#x27;Sentiment&#x27;
+
+    }else if (this.location.path().includes(&quot;frequency&quot;)){
+      this.display &#x3D; 2;
+      this.movieOptions.location &#x3D; &#x27;Frequency&#x27;
+
+    }else{
+      this.display &#x3D; 0;
+    }
+  }
+
+  /**
+   * Obtains the movie&#x27;s metadata, such as its poster art, release year, and description.
+   * 
+   * @param colon - A parameter that instructs the function to trim the title if it contains a colon.
+   * @returns the movie&#x27;s metadata.
+   */
+  getMetadata(colon?: string){
+    const splitter &#x3D; this.movie?.name.split(&#x27;(&#x27;);
+    
+    var title &#x3D; splitter![0].trim().replace(&#x27;\&quot;&#x27;, &#x27;\&#x27;&#x27;);
+
+    if (colon){title &#x3D; title.split(&#x27;:&#x27;)[0]}
+
+    var searchUrl &#x3D; &#x27;https://api.themoviedb.org/3/search/multi?api_key&#x3D;f213c4954a309bf85342338cab0ba8a6&amp;language&#x3D;en-US&amp;query&#x3D;&#x27;+ title + &#x27;&amp;page&#x3D;1&#x27;;
+
+    if (splitter!.length &gt; 1){
+      var year &#x3D; splitter![1].replace(&#x27;)&#x27;,&#x27;&#x27;).replace(&#x27;-&#x27;,&#x27;&#x27;).trim();
+      var searchUrl &#x3D; &#x27;https://api.themoviedb.org/3/search/multi?api_key&#x3D;f213c4954a309bf85342338cab0ba8a6&amp;language&#x3D;en-US&amp;query&#x3D;&#x27;+ title +&#x27;&amp;year&#x3D;&#x27; + year +&#x27;&amp;page&#x3D;1&#x27;;
+    }
+
+    let header_node &#x3D; {
+      headers: new HttpHeaders(
+          { &#x27;rejectUnauthorized&#x27;: &#x27;false&#x27;,
+            }),
+    
+    };
+    console.log(searchUrl)
+    return this.http.get&lt;JSON&gt;(searchUrl, {responseType:&#x27;json&#x27;})
+  }
+
+  /**
+   * Interprets the results from getMetadata() and configures how the movie page is generated as a result.
+   * 
+   * @param dataResponse - The JSON response recieved from getMetadata().
+   */
+  fillMetadata(dataResponse : Observable&lt;JSON&gt;){
+    this.movie!.name &#x3D; this.movie!.name.replace(&#x27;\&quot;&#x27;,&#x27;\&#x27;&#x27;)
+    
+
+    var dataResponse &#x3D; this.getMetadata()
+
+    
+    dataResponse.subscribe((data:any)&#x3D;&gt;{
+      if(data.res)
+     this.movie!.poster_url &#x3D; &#x27;https://image.tmdb.org/t/p/w220_and_h330_face&#x27;+ data.results[0].poster_path
+    }
+     )
+
+    if (this.movie!.poster_url){
+      dataResponse.subscribe((data:any)&#x3D;&gt; this.movie!.overview &#x3D; data.results[0].overview)
+    }else{
+      var dataResponse &#x3D; this.getMetadata(&#x27;:&#x27;)
+      dataResponse.subscribe((data:any)&#x3D;&gt; this.movie!.poster_url &#x3D; &#x27;https://image.tmdb.org/t/p/w220_and_h330_face&#x27;+ data.results[0].poster_path)
+      dataResponse.subscribe((data:any)&#x3D;&gt; this.movie!.overview &#x3D; data.results[0].overview)
+    }
+  }
+
+  /**
+   * Navigates to the next list of results.
+   */
+  nextPage() :void {
+    var page &#x3D; (Number.parseInt(this.movieOptions.page!) + 1)
+    const id &#x3D; Number(this.route.snapshot.paramMap.get(&#x27;movieid&#x27;));
+    if (this.route.snapshot.paramMap.get(&#x27;word&#x27;) !&#x3D; null){
+      const term &#x3D; this.route.snapshot.paramMap.get(&#x27;word&#x27;)
+      this.router.navigate([&#x27;movie&#x27;, id, &#x27;page&#x27;,page, &#x27;frequency&#x27;, term]).then(()&#x3D;&gt; window.location.reload());
+    }else if(this.route.snapshot.paramMap.get(&#x27;sentiment&#x27;)!&#x3D; null){
+      const sentiment &#x3D; this.route.snapshot.paramMap.get(&#x27;sentiment&#x27;)
+      this.router.navigate([&#x27;movie&#x27;, id, &#x27;page&#x27;,page, &#x27;sentiment&#x27;, sentiment]).then(()&#x3D;&gt; window.location.reload());
+    }else{
+
+      this.router.navigate([&#x27;movie&#x27;, id, &#x27;page&#x27;,page]).then(()&#x3D;&gt; window.location.reload());
+    }
+  }
+
+  /**
+   * Navigates to the previous list of results.
+   */
+  lastPage() :void {
+    var page &#x3D; (Number.parseInt(this.movieOptions.page!) - 1)
+    const id &#x3D; Number(this.route.snapshot.paramMap.get(&#x27;movieid&#x27;));
+    if (this.route.snapshot.paramMap.get(&#x27;word&#x27;) !&#x3D; null){
+      const term &#x3D; this.route.snapshot.paramMap.get(&#x27;word&#x27;)
+      this.router.navigate([&#x27;movie&#x27;, id, &#x27;page&#x27;, page, &#x27;frequency&#x27;, term]).then(()&#x3D;&gt; window.location.reload());
+    }else if(this.route.snapshot.paramMap.get(&#x27;sentiment&#x27;)!&#x3D; null){
+      const sentiment &#x3D; this.route.snapshot.paramMap.get(&#x27;sentiment&#x27;)
+      this.router.navigate([&#x27;movie&#x27;, id, &#x27;page&#x27; ,page, &#x27;sentiment&#x27;, sentiment]).then(()&#x3D;&gt; window.location.reload());
+    }
+    else{
+
+      this.router.navigate([&#x27;movie&#x27;, id, &#x27;page&#x27;,page]).then(()&#x3D;&gt; window.location.reload());
+    }
+  }
+
+  /**
+   * Gets the size of the review list in the ReviewListComponent.
+   * 
+   * @returns the size of the review list.
+   */
+  getSize(){
+    console.log(this.input.getSize())
+    return this.input.getSize()
+  }
+
+  /**
+   * Instructs the router to go to the previously loaded page.
+   */
+  goBack(): void {
+    this.location.back();
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;head&gt;
+    &lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;width&#x3D;device-width, initial-scale&#x3D;1.0&quot;&gt;
+    &lt;meta charset&#x3D;&quot;utf-8&quot;&gt;
+    &lt;title&gt;Movie | ReviewSense&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;div class&#x3D;&quot;analysis-display&quot;&gt;
+    &lt;div class&#x3D;&quot;poster-title-wrapper&quot;&gt;
+        &lt;div class&#x3D;&quot;movie-cover&quot;&gt;
+            &lt;span *ngIf&#x3D;&quot;movie&quot;&gt;
+                    &lt;div *ngIf&#x3D;&quot;movie.poster_url else titleDisplay&quot;&gt;
+                        &lt;img src&#x3D;{{movie.poster_url}}&gt;
+                    &lt;/div&gt;
+                    &lt;ng-template #titleDisplay&gt;{{movie.name}}&lt;/ng-template&gt;
+                &lt;/span&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!--Conditional display of components based on routing ID.--&gt;
+
+    &lt;div class&#x3D;&quot;combined-display-wrapper&quot;&gt;
+        &lt;div&gt;
+            &lt;app-combined-display *ngIf&#x3D;&quot;display &#x3D;&#x3D;&#x3D; 0&quot; [movie]&#x3D;&quot;movie&quot;&gt;&lt;/app-combined-display&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;app-sentiment-display *ngIf&#x3D;&quot;display &#x3D;&#x3D;&#x3D; 1&quot;&gt;&lt;/app-sentiment-display&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;app-word-frequency-display *ngIf&#x3D;&quot;display &#x3D;&#x3D;&#x3D; 2&quot;&gt;&lt;/app-word-frequency-display&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;h1&gt;List of Reviews&lt;/h1&gt; 
+
+&lt;div class&#x3D;&quot;reviews-display&quot;&gt;
+    &lt;app-review-list id&#x3D;&quot;pageResults&quot; [options]&#x3D;&quot;movieOptions&quot; #pageResults&gt;&lt;/app-review-list&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;navagation-buttons&quot;&gt;
+    &lt;div *ngIf&#x3D;&quot;movieOptions.page&#x3D;&#x3D;&#x27;0&#x27;; else multiBlock&quot;&gt;
+        &lt;div *ngIf&#x3D;&quot;getSize() &gt; 19;&quot;&gt;
+        &lt;button name&#x3D;&quot;nextPage&quot; (click)&#x3D;&quot;nextPage()&quot;&gt;Next Page&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ng-template #multiBlock&gt;
+        &lt;div *ngIf&#x3D;&quot;getSize() &gt; 19; else lastBlock&quot;&gt;
+            &lt;button (click)&#x3D;&quot;lastPage()&quot;&gt;Previous Page&lt;/button&gt;
+            &lt;button (click)&#x3D;&quot;nextPage()&quot;&gt;Next Page&lt;/button&gt;
+
+        &lt;/div&gt;
+        &lt;ng-template #lastBlock&gt;
+            &lt;button (click)&#x3D;&quot;lastPage()&quot;&gt;Previous Page&lt;/button&gt;
+
+        &lt;/ng-template&gt;
+    &lt;/ng-template&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;empty&quot;&gt;
+
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./movie-page.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: auto;
+}
+
+.analysis-display {
+    display: grid;
+    grid-template-columns: 20rem auto auto;
+    grid-row: auto auto;
+    padding: auto;
+}
+
+.reviews-display {
+    border: 5px solid #ff7d00;
+    margin-top: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.movie-cover {
+    width: 16rem;
+    height: 22rem;
+    border: 2px;
+    margin: 2rem;
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    box-shadow: .3rem .3rem .5rem grey;
+    background-color: #d8d8d8;
+    overflow-wrap: break-word;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    border-radius: 10px 10px 0px 0px;
+    padding-left: 1rem;
+    margin-top: 0rem;
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    margin-bottom: 0rem;
+    margin-left: 1.97rem;
+    margin-right: 1.97rem;
+    background-color: #ff7d00;
+}
+
+div.empty {
+    height: 1rem;
+    padding: 2rem;
+}
+
+h2.movie-name {
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    padding-left: 3rem;
+}
+
+div.combined-display-wrapper {
+    margin-left: 5rem;
+}
+button {
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+div.navagation-buttons {
+    height: 5rem;
+    text-align: center;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><head>    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta charset="utf-8">    <title>Movie | ReviewSense</title></head><div class="analysis-display">    <div class="poster-title-wrapper">        <div class="movie-cover">            <span *ngIf="movie">                    <div *ngIf="movie.poster_url else titleDisplay">                        <img src={{movie.poster_url}}>                    </div>                    <ng-template #titleDisplay>{{movie.name}}</ng-template>                </span>        </div>    </div>    <!--Conditional display of components based on routing ID.-->    <div class="combined-display-wrapper">        <div>            <app-combined-display *ngIf="display === 0" [movie]="movie"></app-combined-display>        </div>        <div>            <app-sentiment-display *ngIf="display === 1"></app-sentiment-display>        </div>        <div>            <app-word-frequency-display *ngIf="display === 2"></app-word-frequency-display>        </div>    </div></div><h1>List of Reviews</h1> <div class="reviews-display">    <app-review-list id="pageResults" [options]="movieOptions" #pageResults></app-review-list></div><div class="navagation-buttons">    <div *ngIf="movieOptions.page==\'0\'; else multiBlock">        <div *ngIf="getSize() > 19;">        <button name="nextPage" (click)="nextPage()">Next Page</button>        </div>    </div>    <ng-template #multiBlock>        <div *ngIf="getSize() > 19; else lastBlock">            <button (click)="lastPage()">Previous Page</button>            <button (click)="nextPage()">Next Page</button>        </div>        <ng-template #lastBlock>            <button (click)="lastPage()">Previous Page</button>        </ng-template>    </ng-template></div><div class="empty"></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CombinedDisplayComponent', 'selector': 'app-combined-display'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'MenuBarComponent', 'selector': 'app-menu-bar'},{'name': 'MovieComponent', 'selector': 'app-movie'},{'name': 'MovieListComponent', 'selector': 'app-movie-list'},{'name': 'MoviePageComponent', 'selector': 'app-movie-page'},{'name': 'PieChartComponent', 'selector': 'app-pie-chart'},{'name': 'ReviewComponent', 'selector': 'app-review'},{'name': 'ReviewListComponent', 'selector': 'app-review-list'},{'name': 'ReviewPageComponent', 'selector': 'app-review-page'},{'name': 'SearchResultsPageComponent', 'selector': 'app-search-results-page'},{'name': 'SentimentDisplayComponent', 'selector': 'app-sentiment-display'},{'name': 'WordCloudComponent', 'selector': 'app-word-cloud'},{'name': 'WordFrequencyDisplayComponent', 'selector': 'app-word-frequency-display'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MoviePageComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MoviePageComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

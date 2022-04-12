@@ -1,11 +1,12 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { number } from 'echarts';
-import { HoverEvent } from '../HoverEvent';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-
+import { HoverEvent } from '../HoverEvent';
 import { Movie } from '../movie';
 
+/**
+ * Represents a movie to display.
+ */
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
@@ -13,20 +14,27 @@ import { Movie } from '../movie';
 })
 export class MovieComponent implements OnInit {
 
-  // Whether or not the movie is currently being hovered over
+  /**A boolean that determines whether the current movie is active or not. */
   activeHover = false;
 
+  /**The movie to display. */
   @Input() movie!: Movie;
+
+  /**Holds the element reference of the movie. */
   @ViewChild('wrapper') wrapper!: ElementRef;
 
-  // Event containing hover details such as what movie and the x/y coordinates
+  /**An event containing hover details such as the movie and its coordinates. */
   @Output() onHoverChanged = new EventEmitter<HoverEvent | null>();
 
+  /**
+   * @ignore
+   */
   constructor(private http: HttpClient) { 
   }
 
-  
-
+  /**
+   * Initializes the movie.
+   */
   ngOnInit(): void {
     this.movie!.name = this.movie!.name.replace('\"','\'')
 
@@ -49,6 +57,12 @@ export class MovieComponent implements OnInit {
 
   }
 
+  /**
+   * Obtains the movie's metadata, such as its poster art, release year, and description.
+   * 
+   * @param colon - A parameter that instructs the function to trim the title if it contains a colon.
+   * @returns the movie's metadata.
+   */
   getMetadata(colon?: string){
     const splitter = this.movie?.name.split('(');
     var title = splitter![0].trim().replace('\"', '\'');
@@ -72,9 +86,11 @@ export class MovieComponent implements OnInit {
     return this.http.get<JSON>(searchUrl, {responseType:'json'})
   }
 
-  /*
-  * Set the hover state as active and update the parent component with the hover event details
-  */
+  /**
+   * Sets the hover state as active and updates the parent component with the hover event details.
+   * 
+   * @param hover - Determines if the current movie is being hovered.
+   */
   setActiveHover(hover: boolean) {
     if (hover) {
       let rect = this.wrapper.nativeElement.getBoundingClientRect();

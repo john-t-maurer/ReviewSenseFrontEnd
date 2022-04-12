@@ -1,13 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
+import { EChartsOption } from 'echarts';
+
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
 import { ReviewService } from '../review.service';
-import { Options } from 'options';
-import { EChartsOption } from 'echarts';
 
-
+/**
+ * Represents the pie chart shown on the movie page.
+ */
 @Component({
   selector: 'app-pie-chart',
   templateUrl: './pie-chart.component.html',
@@ -15,13 +17,19 @@ import { EChartsOption } from 'echarts';
 })
 export class PieChartComponent implements OnInit {
 
+  /**The movie to get the sentiment from. */
   @Input() movie?: Movie;
+
+  /**The keyword to filter the reviews by. */
   @Input() keyword: string = 'null';
 
+  /**A secondary directive that the pie chart supports. It is used with pieOptions and dataUpdate to help with data updates.*/
   mergeOptions = {};
 
+  /**An array that appends to the data array in the pieOptions directive. */
   dataUpdate: Array<any> = [];
 
+  /**The main directive that the pie chart supports. */
   pieOptions: EChartsOption = {
     tooltip: {
       trigger: 'item',
@@ -70,7 +78,9 @@ export class PieChartComponent implements OnInit {
 
 
 
-
+  /**
+   * @ignore
+   */
   constructor(
     private router: Router,
     private actRoute: ActivatedRoute,
@@ -79,26 +89,26 @@ export class PieChartComponent implements OnInit {
   ) {  
     
     setTimeout(()=>this.getSentimentValues(), 1000)}
-
+  
+  /**
+   * Initializes the pie chart.
+   */
   ngOnInit(): void{
-    
-    
     this.getMovie();
     
     console.log(this.pieOptions)
 
     this.getSentimentValues()
     console.log(this.pieOptions)
-
   }
 
+  /**
+   * Updates the pie chart data based on the sentiment of the displayed reviews.
+   */
   getSentimentValues(): void{
     
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));
     const page = Number(this.actRoute.snapshot.paramMap.get('page'));
-    var count = 0
-    var sentiment = ''
-    var newData :any = []
 
     this.reviewService.getPieChart(id, page,this.keyword).subscribe((res :any) => res.map((entry :any) => {
       console.log(entry)
@@ -134,12 +144,20 @@ export class PieChartComponent implements OnInit {
     
   }
 
+  /**
+   * Gets the movie this pie chart is associated with.
+   */
   getMovie(): void {
     const id = Number(this.actRoute.snapshot.paramMap.get('movieid'));
     this.movieService.getMovie(id)
       .subscribe(movie => this.movie = movie);
   }
 
+  /**
+   * Gets the portion of the pie chart that was clicked and navigates to the corresponding page.
+   * 
+   * @param event - The click event that caused this function to fire.
+   */
   onClick(event: any){
     const movieId = Number(this.actRoute.snapshot.paramMap.get('movieid'));
     const page = Number(this.actRoute.snapshot.paramMap.get('page'))

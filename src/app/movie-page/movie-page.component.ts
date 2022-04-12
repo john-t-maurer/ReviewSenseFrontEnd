@@ -1,18 +1,18 @@
 import { Component, OnInit, Input, ViewChild} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { Observable } from 'rxjs';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
 import { Options } from '../options';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { MovieComponent } from '../movie/movie.component';
-import { Observable } from 'rxjs';
 import { ReviewListComponent } from '../review-list/review-list.component';
 
-
-
-
+/**
+ * Represents the movie page.
+ */
 @Component({
   selector: 'app-movie-page',
   templateUrl: './movie-page.component.html',
@@ -20,12 +20,13 @@ import { ReviewListComponent } from '../review-list/review-list.component';
 })
 export class MoviePageComponent implements OnInit {
 
+  /**The movie associated with this page. */
   @Input() movie?: Movie;
 
+  /**The metadata of the movie, including its poster art and description. */
   metaData!: Observable<JSON>;
 
-  
-
+  /**The Options directive used to generate this movie page. */
   movieOptions: Options = {
     header: "All reviews for " + this.movie?.name,
     query: "",
@@ -33,12 +34,15 @@ export class MoviePageComponent implements OnInit {
     page: String(this.route.snapshot.paramMap.get('page'))
   };
 
+  /**A number representing which display to render. */
   display?: Number;
 
-  
+  /**The ReviewListComponent that is associated with this movie page. */
+  @ViewChild('pageResults',{static: true}) input!: ReviewListComponent;
 
-  
-
+  /**
+   * @ignore
+   */
   constructor(
     private movieService:MovieService,
     private route: ActivatedRoute,
@@ -47,27 +51,28 @@ export class MoviePageComponent implements OnInit {
     private http: HttpClient
   ) { 
     setTimeout(()=>this.fillMetadata(this.metaData), 3000)
-
   }
 
+  /**
+   * Initializes the movie page.
+   */
   ngOnInit(): void {
-
-
     this.getMovie();
-  
-    
-    
     this.generateDisplay();
-    
-    
   }
 
+  /**
+   * Gets the movie this movie page is associated with.
+   */
   getMovie(): void {
     const id = Number(this.route.snapshot.paramMap.get('movieid'));
     this.movieService.getMovie(id)
       .subscribe(movie => this.movie = movie);
   }
 
+  /**
+   * Generates the display to use based on this movie page based on the URL.
+   */
   generateDisplay(): void{
     if (this.location.path().includes("sentiment")){
       this.display = 1;
@@ -82,6 +87,12 @@ export class MoviePageComponent implements OnInit {
     }
   }
 
+  /**
+   * Obtains the movie's metadata, such as its poster art, release year, and description.
+   * 
+   * @param colon - A parameter that instructs the function to trim the title if it contains a colon.
+   * @returns the movie's metadata.
+   */
   getMetadata(colon?: string){
     const splitter = this.movie?.name.split('(');
     
@@ -106,6 +117,11 @@ export class MoviePageComponent implements OnInit {
     return this.http.get<JSON>(searchUrl, {responseType:'json'})
   }
 
+  /**
+   * Interprets the results from getMetadata() and configures how the movie page is generated as a result.
+   * 
+   * @param dataResponse - The JSON response recieved from getMetadata().
+   */
   fillMetadata(dataResponse : Observable<JSON>){
     this.movie!.name = this.movie!.name.replace('\"','\'')
     
@@ -128,6 +144,9 @@ export class MoviePageComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates to the next list of results.
+   */
   nextPage() :void {
     var page = (Number.parseInt(this.movieOptions.page!) + 1)
     const id = Number(this.route.snapshot.paramMap.get('movieid'));
@@ -143,6 +162,9 @@ export class MoviePageComponent implements OnInit {
     }
   }
 
+  /**
+   * Navigates to the previous list of results.
+   */
   lastPage() :void {
     var page = (Number.parseInt(this.movieOptions.page!) - 1)
     const id = Number(this.route.snapshot.paramMap.get('movieid'));
@@ -159,16 +181,19 @@ export class MoviePageComponent implements OnInit {
     }
   }
 
-  @ViewChild('pageResults',{static: true}) input!: ReviewListComponent;
-
+  /**
+   * Gets the size of the review list in the ReviewListComponent.
+   * 
+   * @returns the size of the review list.
+   */
   getSize(){
     console.log(this.input.getSize())
     return this.input.getSize()
   }
 
-  
-
-
+  /**
+   * Instructs the router to go to the previously loaded page.
+   */
   goBack(): void {
     this.location.back();
   }

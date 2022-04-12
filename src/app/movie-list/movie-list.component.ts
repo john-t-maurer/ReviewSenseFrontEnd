@@ -5,10 +5,10 @@ import { MovieService } from '../movie.service';
 import { Options } from '../options';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HoverEvent } from '../HoverEvent';
-import { AngularD3CloudComponent } from 'angular-d3-cloud';
 
-
-
+/**
+ * Represents a list of movies to display.
+ */
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
@@ -16,26 +16,43 @@ import { AngularD3CloudComponent } from 'angular-d3-cloud';
 })
 export class MovieListComponent implements OnInit {
 
+  /**The Options directive that instructs how the list is generated. */
   @Input() options?: Options;
 
+  /**The size of this movie list. */
   @Output() size = new EventEmitter<number>();
 
-  // The currently hovered movie
+  /**The movie that is currently hovered over by the mouse. */
   activeMovie: Movie | null = null;
+
+  /**An array that holds the list of movies. */
   movies: Movie[] = [];
 
+  /**Holds the element reference of the movie. */
   @ViewChild('wrapper') wrapper!: ElementRef;
 
-  // The x and y coordinates of the movieInfoPopup
+  /**The x-coordinate of the movie tooltip. */
   x = '0';
+
+  /**The y-coordinate of the movie tooltip. */
   y = '0';
+
+  /**The width of the browser window. */
   public screenWidth: any;
+
+  /**The height of the browser window. */
   public screenHeight: any;
 
+  /**
+   * @ignore
+   */
   constructor(
     private movieService: MovieService,
   ) { }
 
+  /**
+   * Initializes the movie list.
+   */
   ngOnInit(): void {
     this.getMovies();
     
@@ -43,6 +60,7 @@ export class MovieListComponent implements OnInit {
     this.screenHeight = window.innerHeight;
   }
 
+  /**The directive that the carousel supports. */
   customOptions: OwlOptions = {
     loop: true,
     autoWidth: true,
@@ -69,11 +87,17 @@ export class MovieListComponent implements OnInit {
     nav: true
   }
 
+  /**
+   * Gets the size of the list of movies.
+   * @returns the size of the array of movies.
+   */
   getSize(){
-    
     return (this.movies.length);
   }
 
+  /**
+   * Gets the movies to populate the movies array with, depending on the Options directive.
+   */
   getMovies(): void {
     switch (this.options?.location) {
       case "Home":
@@ -91,8 +115,10 @@ export class MovieListComponent implements OnInit {
 
   }
 
-  /*
-   * Set the movie info to display in the popup
+  /**
+   * Sets the movie information to display in the tooltip.
+   * 
+   * @param hoverEvent - The HoverEvent that keeps track of where the mouse is.
    */
   setActiveMovie(hoverEvent: HoverEvent | null) {
     if (hoverEvent) {
@@ -120,14 +146,15 @@ export class MovieListComponent implements OnInit {
     }
   }
 
+  /**A listener that fires off events whenever the screen size changes. */
   @HostListener('window:resize', ['$event'])
 
-  onResize(event: any) {
-
+  /**
+   * A function that handles whenever the HostListener senses a window resize.
+   */
+  onResize() {
     this.screenWidth = window.innerWidth;
-
     this.screenHeight = window.innerHeight;
-
   }
 
  

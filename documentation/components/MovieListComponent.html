@@ -1,0 +1,1311 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>movie-review-front-end documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">movie-review-front-end documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  MovieListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/movie-list/movie-list.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Represents a list of movies to display.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-movie-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./movie-list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./movie-list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeMovie" >activeMovie</a>
+                            </li>
+                            <li>
+                                <a href="#customOptions" >customOptions</a>
+                            </li>
+                            <li>
+                                <a href="#movies" >movies</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#screenHeight" >screenHeight</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#screenWidth" >screenWidth</a>
+                            </li>
+                            <li>
+                                <a href="#wrapper" >wrapper</a>
+                            </li>
+                            <li>
+                                <a href="#x" >x</a>
+                            </li>
+                            <li>
+                                <a href="#y" >y</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getMovies" >getMovies</a>
+                            </li>
+                            <li>
+                                <a href="#getSize" >getSize</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onResize" >onResize</a>
+                            </li>
+                            <li>
+                                <a href="#setActiveMovie" >setActiveMovie</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#options" >options</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#size" >size</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostListeners</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#window:resize" >window:resize</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+        </tbody>
+    </table>
+</section>
+
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="options"></a>
+                        <b>options</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Options.html" target="_self" >Options</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/movie-list/movie-list.component.ts:20</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The Options directive that instructs how the list is generated.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="size"></a>
+                        <b>size</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/movie-list/movie-list.component.ts:23</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The size of this movie list.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3>HostListeners</h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="window:resize"></a>
+                    <span class="name">
+                        <span ><b>window:resize</b></span>
+                        <a href="#window:resize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <i>Arguments : </i><code>'$event' </code>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>window:resize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="155"
+                            class="link-to-prism">src/app/movie-list/movie-list.component.ts:155</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A listener that fires off events whenever the screen size changes.</p>
+</div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMovies"></a>
+                    <span class="name">
+                        <span ><b>getMovies</b></span>
+                        <a href="#getMovies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMovies()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="101"
+                            class="link-to-prism">src/app/movie-list/movie-list.component.ts:101</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the movies to populate the movies array with, depending on the Options directive.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSize"></a>
+                    <span class="name">
+                        <span ><b>getSize</b></span>
+                        <a href="#getSize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSize()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/movie-list/movie-list.component.ts:94</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Gets the size of the list of movies.</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>the size of the array of movies.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/movie-list/movie-list.component.ts:56</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Initializes the movie list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onResize"></a>
+                    <span class="name">
+                        <span ><b>onResize</b></span>
+                        <a href="#onResize"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onResize()</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="155"
+                            class="link-to-prism">src/app/movie-list/movie-list.component.ts:155</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>A listener that fires off events whenever the screen size changes.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="setActiveMovie"></a>
+                    <span class="name">
+                        <span ><b>setActiveMovie</b></span>
+                        <a href="#setActiveMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>setActiveMovie(hoverEvent: <a href="../interfaces/HoverEvent.html" target="_self">HoverEvent | null</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="123"
+                            class="link-to-prism">src/app/movie-list/movie-list.component.ts:123</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sets the movie information to display in the tooltip.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>hoverEvent</td>
+                                    <td>
+                                                <code><a href="../interfaces/HoverEvent.html" target="_self" >HoverEvent | null</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The HoverEvent that keeps track of where the mouse is.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activeMovie"></a>
+                    <span class="name">
+                        <span ><b>activeMovie</b></span>
+                        <a href="#activeMovie"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Movie.html" target="_self" >Movie | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/movie-list/movie-list.component.ts:26</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The movie that is currently hovered over by the mouse.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="customOptions"></a>
+                    <span class="name">
+                        <span ><b>customOptions</b></span>
+                        <a href="#customOptions"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Options.html" target="_self" >OwlOptions</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+    loop: true,
+    autoWidth: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: [&#x27;&lt; &lt;&#x27;, &#x27;&gt; &gt;&#x27;],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/movie-list/movie-list.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The directive that the carousel supports.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="movies"></a>
+                    <span class="name">
+                        <span ><b>movies</b></span>
+                        <a href="#movies"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Movie.html" target="_self" >Movie[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/movie-list/movie-list.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>An array that holds the list of movies.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="screenHeight"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>screenHeight</b></span>
+                        <a href="#screenHeight"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/movie-list/movie-list.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The height of the browser window.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="screenWidth"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>screenWidth</b></span>
+                        <a href="#screenWidth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/movie-list/movie-list.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The width of the browser window.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="wrapper"></a>
+                    <span class="name">
+                        <span ><b>wrapper</b></span>
+                        <a href="#wrapper"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <b>Decorators : </b>
+                        <br />
+                        <code>
+                            @ViewChild(&#x27;wrapper&#x27;)<br />
+                        </code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/movie-list/movie-list.component.ts:32</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds the element reference of the movie.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="x"></a>
+                    <span class="name">
+                        <span ><b>x</b></span>
+                        <a href="#x"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;0&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/movie-list/movie-list.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The x-coordinate of the movie tooltip.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="y"></a>
+                    <span class="name">
+                        <span ><b>y</b></span>
+                        <a href="#y"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;0&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/movie-list/movie-list.component.ts:38</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>The y-coordinate of the movie tooltip.</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Input, ViewChild, ElementRef, HostListener, Output, EventEmitter} from &#x27;@angular/core&#x27;;
+
+import { Movie } from &#x27;../movie&#x27;;
+import { MovieService } from &#x27;../movie.service&#x27;;
+import { Options } from &#x27;../options&#x27;;
+import { OwlOptions } from &#x27;ngx-owl-carousel-o&#x27;;
+import { HoverEvent } from &#x27;../HoverEvent&#x27;;
+
+/**
+ * Represents a list of movies to display.
+ */
+@Component({
+  selector: &#x27;app-movie-list&#x27;,
+  templateUrl: &#x27;./movie-list.component.html&#x27;,
+  styleUrls: [&#x27;./movie-list.component.css&#x27;]
+})
+export class MovieListComponent implements OnInit {
+
+  /**The Options directive that instructs how the list is generated. */
+  @Input() options?: Options;
+
+  /**The size of this movie list. */
+  @Output() size &#x3D; new EventEmitter&lt;number&gt;();
+
+  /**The movie that is currently hovered over by the mouse. */
+  activeMovie: Movie | null &#x3D; null;
+
+  /**An array that holds the list of movies. */
+  movies: Movie[] &#x3D; [];
+
+  /**Holds the element reference of the movie. */
+  @ViewChild(&#x27;wrapper&#x27;) wrapper!: ElementRef;
+
+  /**The x-coordinate of the movie tooltip. */
+  x &#x3D; &#x27;0&#x27;;
+
+  /**The y-coordinate of the movie tooltip. */
+  y &#x3D; &#x27;0&#x27;;
+
+  /**The width of the browser window. */
+  public screenWidth: any;
+
+  /**The height of the browser window. */
+  public screenHeight: any;
+
+  /**
+   * @ignore
+   */
+  constructor(
+    private movieService: MovieService,
+  ) { }
+
+  /**
+   * Initializes the movie list.
+   */
+  ngOnInit(): void {
+    this.getMovies();
+    
+    this.screenWidth &#x3D; window.innerWidth;
+    this.screenHeight &#x3D; window.innerHeight;
+  }
+
+  /**The directive that the carousel supports. */
+  customOptions: OwlOptions &#x3D; {
+    loop: true,
+    autoWidth: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: [&#x27;&lt; &lt;&#x27;, &#x27;&gt; &gt;&#x27;],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: true
+  }
+
+  /**
+   * Gets the size of the list of movies.
+   * @returns the size of the array of movies.
+   */
+  getSize(){
+    return (this.movies.length);
+  }
+
+  /**
+   * Gets the movies to populate the movies array with, depending on the Options directive.
+   */
+  getMovies(): void {
+    switch (this.options?.location) {
+      case &quot;Home&quot;:
+        this.movieService.getHomepage().subscribe(movies &#x3D;&gt; this.movies &#x3D; movies);
+        break;
+      case &quot;Lowest&quot;:
+        this.movieService.getLowestSentiment().subscribe(movies &#x3D;&gt; this.movies &#x3D; movies);
+        break;
+      case &quot;Highest&quot;:
+        this.movieService.getHighestSentiment().subscribe(movies &#x3D;&gt; this.movies &#x3D; movies);
+        break;
+      case &quot;Search&quot;:
+        this.movieService.getMovies(this.options?.page, this.options?.query).subscribe(movies &#x3D;&gt; this.movies &#x3D; movies);
+    }
+
+  }
+
+  /**
+   * Sets the movie information to display in the tooltip.
+   * 
+   * @param hoverEvent - The HoverEvent that keeps track of where the mouse is.
+   */
+  setActiveMovie(hoverEvent: HoverEvent | null) {
+    if (hoverEvent) {
+
+      let currentRect &#x3D; this.wrapper.nativeElement.getBoundingClientRect();
+      let x &#x3D; hoverEvent.x - currentRect.x + 190;
+      let y &#x3D; hoverEvent.y - currentRect.y;
+      let width &#x3D; this.screenWidth;
+    
+
+      this.activeMovie &#x3D; hoverEvent.movie;
+
+      if((x + 505) &gt; (width)) {
+        this.x &#x3D; &#x60;${x - (width - (x - 695))}px&#x60; ;
+      } else {
+        this.x &#x3D; &#x60;${x}px&#x60;;
+      }   
+      
+      this.y &#x3D; &#x60;${y + 20}px&#x60;;
+
+    } else {
+      this.activeMovie &#x3D; null;
+      this.x &#x3D; &#x27;0&#x27;;
+      this.y &#x3D; &#x27;0&#x27;;
+    }
+  }
+
+  /**A listener that fires off events whenever the screen size changes. */
+  @HostListener(&#x27;window:resize&#x27;, [&#x27;$event&#x27;])
+
+  /**
+   * A function that handles whenever the HostListener senses a window resize.
+   */
+  onResize() {
+    this.screenWidth &#x3D; window.innerWidth;
+    this.screenHeight &#x3D; window.innerHeight;
+  }
+
+ 
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div *ngIf&#x3D;&quot;options&quot; style&#x3D;&quot;position: relative;&quot; #wrapper&gt;
+    &lt;h1&gt;{{options.header}}&lt;/h1&gt;
+
+    &lt;div [style.transform]&#x3D;&quot;&#x27;translate(&#x27; + this.x + &#x27;, &#x27; + this.y + &#x27;)&#x27;&quot; class&#x3D;&quot;MovieInfo&quot; [hidden]&#x3D;&quot;activeMovie &#x3D;&#x3D;&#x3D; null&quot;&gt;
+        &lt;h2&gt;{{activeMovie?.name}}&lt;/h2&gt;
+        &lt;hr&gt;
+        &lt;h3 class&#x3D;&quot;movie-overview&quot;&gt;{{activeMovie?.overview}}&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div  *ngIf&#x3D;&quot;options.location!&#x3D;&#x27;Search&#x27;; else searchBlock&quot; class&#x3D;&quot;display-flip&quot;&gt;
+
+        &lt;div class&#x3D;&quot;carousel-wrap&quot;&gt;
+            &lt;owl-carousel-o [options]&#x3D;&quot;customOptions&quot;&gt;
+                &lt;ng-container *ngFor&#x3D;&quot;let movie of movies&quot; style&#x3D;&quot;width:200px&quot;&gt;
+                    &lt;ng-template carouselSlide [id]&#x3D;&quot;movie.name&quot; [width]&#x3D;&quot;200&quot;&gt;
+                        &lt;app-movie [movie]&#x3D;&quot;movie&quot; (onHoverChanged)&#x3D;&quot;this.setActiveMovie($event)&quot;&gt;&lt;/app-movie&gt;
+                        &lt;div&gt;
+                        &lt;h4 class&#x3D;&quot;movie-title-card&quot;&gt;{{movie.name}}&lt;/h4&gt;
+                        &lt;/div&gt;
+                    &lt;/ng-template&gt;
+                &lt;/ng-container&gt;
+
+            &lt;/owl-carousel-o&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;ng-template #searchBlock&gt;
+        &lt;div class&#x3D;&quot;movie-list&quot; &gt;
+            &lt;div *ngFor&#x3D;&quot;let movie of movies&quot; style&#x3D;&quot;width:200px&quot;&gt;
+                &lt;app-movie [movie]&#x3D;&quot;movie&quot;&gt;&lt;/app-movie&gt;
+                &lt;div&gt;
+                &lt;h4 class&#x3D;&quot;movie-title-card&quot;&gt;{{movie.name}}&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ng-template&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./movie-list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1 {
+    background-color: whitesmoke;
+    color: #ff7d00;
+    padding: 1rem;
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    padding-left: 2rem;
+    margin: auto;
+}
+
+.carousel-wrap {
+    height: 100;
+    width: 95%;
+    padding: auto;
+    margin: auto;
+    z-index: 1;
+    overflow: visible;
+    position: relative;
+}
+
+
+
+div.movie {
+    overflow: visible;
+}
+
+.MovieInfo {
+    position: absolute;
+    width: 30rem;
+    height: 14rem;
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    z-index: 999;
+    background: white;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h3.movie-overview {
+    font-size: 12;
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+h4.movie-title-card {
+    font-size: 8;
+    font-family: &#x27;Roboto&#x27;, sans-serif;
+    overflow: hidden;
+    padding: 10px;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div *ngIf="options" style="position: relative;" #wrapper>    <h1>{{options.header}}</h1>    <div [style.transform]="\'translate(\' + this.x + \', \' + this.y + \')\'" class="MovieInfo" [hidden]="activeMovie === null">        <h2>{{activeMovie?.name}}</h2>        <hr>        <h3 class="movie-overview">{{activeMovie?.overview}}</h3>    </div>    <div  *ngIf="options.location!=\'Search\'; else searchBlock" class="display-flip">        <div class="carousel-wrap">            <owl-carousel-o [options]="customOptions">                <ng-container *ngFor="let movie of movies" style="width:200px">                    <ng-template carouselSlide [id]="movie.name" [width]="200">                        <app-movie [movie]="movie" (onHoverChanged)="this.setActiveMovie($event)"></app-movie>                        <div>                        <h4 class="movie-title-card">{{movie.name}}</h4>                        </div>                    </ng-template>                </ng-container>            </owl-carousel-o>        </div>    </div>    <ng-template #searchBlock>        <div class="movie-list" >            <div *ngFor="let movie of movies" style="width:200px">                <app-movie [movie]="movie"></app-movie>                <div>                <h4 class="movie-title-card">{{movie.name}}</h4>                </div>            </div>        </div>    </ng-template></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CombinedDisplayComponent', 'selector': 'app-combined-display'},{'name': 'HomePageComponent', 'selector': 'app-home-page'},{'name': 'MenuBarComponent', 'selector': 'app-menu-bar'},{'name': 'MovieComponent', 'selector': 'app-movie'},{'name': 'MovieListComponent', 'selector': 'app-movie-list'},{'name': 'MoviePageComponent', 'selector': 'app-movie-page'},{'name': 'PieChartComponent', 'selector': 'app-pie-chart'},{'name': 'ReviewComponent', 'selector': 'app-review'},{'name': 'ReviewListComponent', 'selector': 'app-review-list'},{'name': 'ReviewPageComponent', 'selector': 'app-review-page'},{'name': 'SearchResultsPageComponent', 'selector': 'app-search-results-page'},{'name': 'SentimentDisplayComponent', 'selector': 'app-sentiment-display'},{'name': 'WordCloudComponent', 'selector': 'app-word-cloud'},{'name': 'WordFrequencyDisplayComponent', 'selector': 'app-word-frequency-display'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'MovieListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'MovieListComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
