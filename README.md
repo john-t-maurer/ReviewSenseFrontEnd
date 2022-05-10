@@ -1,6 +1,15 @@
 # ReviewSense - Front End Repository
 This repository hosts the front end Angular application for ReviewSense.
 
+### License & Copyright
+We are working and discussing the merits of several open-source license structures right now, so please stay tuned. Until then, the following is enforced:
+
+Copyright 2022 by the ReviewSense Team - All Rights Reserved.
+
+Unauthorized copying of the contents of this repository, via any medium, is strictly prohibited. The contents of this repository cannot be reproduced, edited, or distributed without written permission.
+
+Developed by Carrie West, Dalton Senseman, and John Maurer.
+
 ### Abstract
 In this senior project, we were tasked with developing a web-based solution that incorporates machine learning on a set of movie reviews to organize them by sentiment. The stakeholders of our project expressed frustrations with the lack of overall analytics for movie reviews provided by existing services. Our team examined the different potential models and decided to use a Naïve Bayes model for our approach. We gathered our data from two Kaggle datasets, one containing labelled data used to train our model, and the other containing unlabelled data to apply labels to using our trained model. Additionally, we established a back-end server with Python Flask to communicate to our SQLite database and send data using HTTP endpoints. This data is then displayed on a front-end website, built with the Angular framework. We present the resulting website as a minimum viable solution to our stakeholder's concerns.
 
